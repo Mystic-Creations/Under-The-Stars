@@ -3,7 +3,7 @@ package net.justmili.underthestars;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.*;
 import net.justmili.underthestars.init.UnderTheStarsBlocks;
 import net.justmili.underthestars.init.UnderTheStarsItems;
 import net.justmili.underthestars.init.UnderTheStarsTabs;
