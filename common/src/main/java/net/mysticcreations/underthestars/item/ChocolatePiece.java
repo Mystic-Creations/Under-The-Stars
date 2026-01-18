@@ -3,8 +3,6 @@ package net.mysticcreations.underthestars.item;
 
 import java.util.List;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.justmili.underthestars.init.UnderTheStarsTabs;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;

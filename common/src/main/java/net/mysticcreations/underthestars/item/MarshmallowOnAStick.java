@@ -12,18 +12,16 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.network.chat.Component;
 
-import net.justmili.underthestars.init.UnderTheStarsTabs;
-
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-
 import java.util.List;
 
 public class MarshmallowOnAStick extends Item {
 	public MarshmallowOnAStick() {
-		super(new Item.Properties().stacksTo(4).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.4f)
-
-				.build()));
-		ItemGroupEvents.modifyEntriesEvent(UnderTheStarsTabs.UNDER_THE_STARS).register(content -> content.accept(this));
+		super(new Item.Properties()
+            .stacksTo(4)
+            .rarity(Rarity.COMMON)
+            .food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.4f)
+				.build()
+            ));
 	}
 
 	@Override

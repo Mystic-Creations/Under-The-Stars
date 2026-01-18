@@ -13,6 +13,7 @@ allprojects {
     version = rootProject.mod_version //for file building
     mod_version = rootProject.mod_version
     minecraft_version = rootProject.minecraft_version
+    fabric_loader_version = rootProject.fabric_loader_version
     architectury_api_version = rootProject.architectury_api_version
 
     repositories {

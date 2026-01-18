@@ -1,0 +1,1 @@
+- Sleeping bags are setting spawn, they shouldn't do that

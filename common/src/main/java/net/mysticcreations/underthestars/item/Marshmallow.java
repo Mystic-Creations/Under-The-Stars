@@ -9,18 +9,16 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.network.chat.Component;
 
-import net.justmili.underthestars.init.UnderTheStarsTabs;
-
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-
 import java.util.List;
 
 public class Marshmallow extends Item {
 	public Marshmallow() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.4f)
-
-				.build()));
-		ItemGroupEvents.modifyEntriesEvent(UnderTheStarsTabs.UNDER_THE_STARS).register(content -> content.accept(this));
+		super(new Item.Properties()
+            .stacksTo(64)
+            .rarity(Rarity.COMMON)
+            .food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.4f)
+				.build()
+            ));
 	}
 
 	@Override

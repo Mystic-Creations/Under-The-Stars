@@ -9,18 +9,16 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.network.chat.Component;
 
-import net.justmili.underthestars.init.UnderTheStarsTabs;
-
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-
 import java.util.List;
 
 public class KelpGelatin extends Item {
 	public KelpGelatin() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(3).saturationMod(0.6f)
-
-				.build()));
-		ItemGroupEvents.modifyEntriesEvent(UnderTheStarsTabs.UNDER_THE_STARS).register(content -> content.accept(this));
+		super(new Item.Properties()
+            .stacksTo(64)
+            .rarity(Rarity.COMMON)
+            .food((new FoodProperties.Builder()).nutrition(3).saturationMod(0.6f)
+				.build()
+            ));
 	}
 
 	@Override
