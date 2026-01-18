@@ -1,4 +1,4 @@
-package net.mysticcreations.underthestars.blockTypes;
+package net.mysticcreations.underthestars.block;
 
 import com.mojang.datafixers.util.Either;
 import net.minecraft.advancements.CriteriaTriggers;
@@ -40,7 +40,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.List;
 
-public abstract class SleepingBag extends BedBlock {
+public class SleepingBag extends BedBlock {
 
     public static final EnumProperty<BedPart> PART = EnumProperty.create("part", BedPart.class);
     public static final BooleanProperty OCCUPIED = BooleanProperty.create("occupied");
@@ -52,7 +52,7 @@ public abstract class SleepingBag extends BedBlock {
     protected static final VoxelShape SOUTH_PILLOW = Block.box(2, 2, 9, 14, 3, 15);
     protected static final VoxelShape WEST_PILLOW  = Block.box(1, 2, 2, 7, 3, 14);
 
-    protected SleepingBag(DyeColor color) {
+    public SleepingBag(DyeColor color) {
         super(color, BlockBehaviour.Properties.copy(Blocks.WHITE_BED).sound(SoundType.WOOL));
         this.registerDefaultState(this.stateDefinition.any()
             .setValue(PART, BedPart.FOOT)

@@ -1,7 +1,7 @@
 {
   "textures": {
-    "0": "underthestars:block/sleeping_bag/green",
-    "particle": "minecraft:block/green_wool"
+    "0": "underthestars:block/sleeping_bag/gray",
+    "particle": "minecraft:block/gray_wool"
   },
   "elements": [
     {
