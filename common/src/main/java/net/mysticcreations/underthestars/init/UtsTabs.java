@@ -23,6 +23,8 @@ public class UtsTabs {
                 tabData.accept(UtsItems.MARSHMALLOW_ON_A_STICK.get());
                 tabData.accept(UtsItems.COOKED_MARSHMALLOW_ON_A_STICK.get());
                 tabData.accept(UtsItems.CHOCOLATE_BAR.get());
+                tabData.accept(UtsItems.OPEN_CHOCOLATE_BAR.get());
+                tabData.accept(UtsItems.WRAPPED_CHOCOLATE_BAR.get());
                 tabData.accept(UtsItems.CHOCOLATE_PIECE.get());
             }).build());
 

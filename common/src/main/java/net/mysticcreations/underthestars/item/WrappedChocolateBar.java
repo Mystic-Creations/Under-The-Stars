@@ -11,14 +11,12 @@ import net.minecraft.world.level.Level;
 
 import java.util.List;
 
-public class ChocolateBar extends Item {
-	public ChocolateBar() {
+public class WrappedChocolateBar extends Item {
+	public WrappedChocolateBar() {
 		super(new Properties()
             .stacksTo(16)
             .rarity(Rarity.COMMON)
-            .food((new FoodProperties.Builder()).nutrition(7).saturationMod(0.6f)
-                .build()
-            ));
+            );
 	}
 
 	@Override

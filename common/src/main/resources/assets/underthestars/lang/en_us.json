@@ -6,6 +6,8 @@
   "item.underthestars.cooked_marshmallow": "Cooked Marshmallow",
   "item.underthestars.cooked_marshmallow_on_a_stick": "Cooked Marshmallow on a Stick",
   "item.underthestars.chocolate_bar": "Chocolate Bar",
+  "item.underthestars.open_chocolate_bar": "Chocolate Bar",
+  "item.underthestars.wrapped_chocolate_bar": "Chocolate Bar",
   "item.underthestars.chocolate_piece": "Chocolate Piece",
   "block.underthestars.white_sleeping_bag": "White Sleeping Bag",
   "advancements.underthestars.eat_kelp_gelatin.title": "Tastes Like Bones",
@@ -16,16 +18,16 @@
   "advancements.underthestars.cooked_marshmallow.descr": "Cook a Marshmallow",
   "advancements.underthestars.cooked_marshmallow_on_a_stick.title": "Camp Cooking",
   "advancements.underthestars.cooked_marshmallow_on_a_stick.descr": "Cook a Marshmallow on a Stick",
-  "advancements.underthestars.cocoa_beans.descr": "???", // Can't think of a name
-  "advancements.underthestars.cocoa_beans.title": "Collect some Cocoa Beans",
-  "advancements.underthestars.chocolate_bar.descr": "Pure Imagination",
-  "advancements.underthestars.chocolate_bar.title": "Make a Chocolate Bar",
-  "advancements.underthestars.biscuit.descr": "Oi Bruv, Pretty Neat Innit?",
-  "advancements.underthestars.biscuit.title": "Make some Biscuits",
-  "advancements.underthestars.smore.descr": "Pretty Neat, Innit?",
-  "advancements.underthestars.smore.title": "Make some Biscuits",
-  "advancement.underthestars.stargazing.desc": "Stargazing",
-  "advancement.underthestars.stargazing.title": "Look up and see the stars on the night sky",
-  "advancement.underthestars.sleeping_bag.desc": "Snoozing Away",
-  "advancement.underthestars.sleeping_bag.title": "Sleep in a Sleeping bag"
+  "advancements.underthestars.cocoa_beans.title": "", // Can't think of a name
+  "advancements.underthestars.cocoa_beans.descr": "Collect some Cocoa Beans",
+  "advancements.underthestars.chocolate_bar.title": "Pure Imagination",
+  "advancements.underthestars.chocolate_bar.descr": "Make a Chocolate Bar",
+  "advancements.underthestars.biscuit.title": "Oi Bruv, Pretty Neat Innit?",
+  "advancements.underthestars.biscuit.descr": "Make some Biscuits",
+  "advancements.underthestars.smore.title": "A Scout's Favorite",
+  "advancements.underthestars.smore.descr": "Make and eat a smore",
+  "advancement.underthestars.stargazing.title": "Stargazing",
+  "advancement.underthestars.stargazing.descr": "Look up and see the stars on the night sky",
+  "advancement.underthestars.sleeping_bag.title": "Snoozing Away",
+  "advancement.underthestars.sleeping_bag.descr": "Sleep in a Sleeping bag"
 }

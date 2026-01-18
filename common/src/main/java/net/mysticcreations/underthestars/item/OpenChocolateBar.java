@@ -11,8 +11,8 @@ import net.minecraft.world.level.Level;
 
 import java.util.List;
 
-public class ChocolateBar extends Item {
-	public ChocolateBar() {
+public class OpenChocolateBar extends Item {
+	public OpenChocolateBar() {
 		super(new Properties()
             .stacksTo(16)
             .rarity(Rarity.COMMON)

@@ -1,0 +1,42 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:cocoa_beans"
+    },
+    "title": {
+      "translate": "advancements.underthestars.cocoa_beans.title"
+    },
+    "description": {
+      "translate": "advancements.underthestars.cocoa_beans.descr"
+    }
+  },
+  "parent": "minecraft:husbandry/plant_seed",
+  "criteria": {
+    "cocoa_beans": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {},
+        "items": [
+          {
+            "items": [
+              "minecraft:cocoa_beans"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cocoa_beans"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "underthestars:chocolate_bar",
+      "underthestars:chocolate_piece",
+      "underthestars:chocolate_piece_to_bar"
+    ],
+    "experience": 5
+  }
+}

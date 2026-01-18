@@ -3,6 +3,7 @@
     "inventory_changed": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
+        "player": {},
         "items": [
           {
             "items": [

@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "underthestars:open_chocolate_bar"
+    },
+    "title": {
+      "translate": "advancements.underthestars.chocolate_bar.title"
+    },
+    "description": {
+      "translate": "advancements.underthestars.chocolate_bar.descr"
+    }
+  },
+  "parent": "underthestars:cooking/cocoa_beans",
+  "criteria": {
+    "chocolate_bar": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {},
+        "items": [
+          {
+            "items": [
+              "underthestars:chocolate_bar",
+              "underthestars:open_chocolate_bar",
+              "underthestars:wrapped_chocolate_bar"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "chocolate_bar"
+    ]
+  ]
+}

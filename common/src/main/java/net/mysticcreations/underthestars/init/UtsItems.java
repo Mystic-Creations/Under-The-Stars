@@ -23,6 +23,8 @@ public class UtsItems {
     public static final RegistrySupplier<Item> MARSHMALLOW_ON_A_STICK = REGISTRY.register("marshmallow_on_a_stick", MarshmallowOnAStick::new);
     public static final RegistrySupplier<Item> COOKED_MARSHMALLOW_ON_A_STICK = REGISTRY.register("cooked_marshmallow_on_a_stick", CookedMarshmallowOnAStick::new);
     public static final RegistrySupplier<Item> CHOCOLATE_BAR = REGISTRY.register("chocolate_bar", ChocolateBar::new);
+    public static final RegistrySupplier<Item> OPEN_CHOCOLATE_BAR = REGISTRY.register("open_chocolate_bar", ChocolateBar::new);
+    public static final RegistrySupplier<Item> WRAPPED_CHOCOLATE_BAR = REGISTRY.register("wrapped_chocolate_bar", WrappedChocolateBar::new);
     public static final RegistrySupplier<Item> CHOCOLATE_PIECE = REGISTRY.register("chocolate_piece", ChocolatePiece::new);
 
     public static void register() {
@@ -30,7 +32,7 @@ public class UtsItems {
     }
 
     private static RegistrySupplier<Item> bedBlock(RegistrySupplier<BedBlock> block) {
-        return REGISTRY.register(block.getId().getPath(), () -> new BedItem(block.get(), new Item.Properties())); //can't be BlockItem
+        return REGISTRY.register(block.getId().getPath(), () -> new BedItem(block.get(), new Item.Properties()));
     }
     private static RegistrySupplier<Item> block(RegistrySupplier<Block> block) {
         return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
