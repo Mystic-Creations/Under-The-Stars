@@ -38,7 +38,7 @@ public class ChocolateBar extends Item {
 		super.appendHoverText(itemstack, world, list, flag);
 	}
 
-    @Override
+    @Override //Fix it on all chocolate stuff
     public InteractionResult interactLivingEntity(ItemStack stack, Player player, LivingEntity target, InteractionHand hand) {
         Level level = player.level();
 

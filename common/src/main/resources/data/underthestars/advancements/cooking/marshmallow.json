@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "underthestars:marshmallow"
+    },
+    "title": {
+      "translate": "advancements.underthestars.marshmallow.title"
+    },
+    "description": {
+      "translate": "advancements.underthestars.marshmallow.descr"
+    },
+    "announce_to_chat": false
+  },
+  "parent": "underthestars:cooking/eat_kelp_gelatin",
+  "criteria": {
+    "inventory_changed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {},
+        "items": [
+          {
+            "items": [
+              "underthestars:marshmallow"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "inventory_changed"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

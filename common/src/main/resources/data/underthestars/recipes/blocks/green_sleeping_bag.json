@@ -6,5 +6,5 @@
   "key": {
     "W": { "item": "minecraft:green_wool" }
   },
-  "result": { "item": "underthestarsd:green_sleeping_bag", "count": 1 }
+  "result": { "item": "underthestars:green_sleeping_bag", "count": 1 }
 }

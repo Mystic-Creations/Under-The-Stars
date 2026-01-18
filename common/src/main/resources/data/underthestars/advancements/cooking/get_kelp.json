@@ -1,17 +1,17 @@
 {
   "display": {
     "icon": {
-      "item": "underthestars:cooked_marshmallow"
+      "item": "minecraft:kelp"
     },
     "title": {
-      "translate": "advancements.underthestars.cooked_marshmallow.title"
+      "translate": "advancements.underthestars.get_kelp.title"
     },
     "description": {
-      "translate": "advancements.underthestars.cooked_marshmallow.descr"
+      "translate": "advancements.underthestars.get_kelp.descr"
     },
     "announce_to_chat": false
   },
-  "parent": "underthestars:cooking/eat_kelp_gelatin",
+  "parent": "minecraft:husbandry/fishy_business",
   "criteria": {
     "inventory_changed": {
       "trigger": "minecraft:inventory_changed",
@@ -20,7 +20,7 @@
         "items": [
           {
             "items": [
-              "underthestars:cooked_marshmallow"
+              "minecraft:kelp"
             ]
           }
         ]

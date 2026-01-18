@@ -8,7 +8,8 @@
     },
     "description": {
       "translate": "advancements.underthestars.cocoa_beans.descr"
-    }
+    },
+    "frame": "goal"
   },
   "parent": "minecraft:husbandry/plant_seed",
   "criteria": {

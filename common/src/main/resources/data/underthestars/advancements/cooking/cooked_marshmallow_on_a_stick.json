@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "underthestars:cooked_marshmallow_on_a_stick"
+    },
+    "title": {
+      "translate": "advancements.underthestars.cooked_marshmallow_on_a_stick.title"
+    },
+    "description": {
+      "translate": "advancements.underthestars.cooked_marshmallow_on_a_stick.descr"
+    }
+  },
+  "parent": "underthestars:cooking/cooked_marshmallow",
+  "criteria": {
+    "inventory_changed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {},
+        "items": [
+          {
+            "items": [
+              "underthestars:cooked_marshmallow_on_a_stick"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "inventory_changed"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

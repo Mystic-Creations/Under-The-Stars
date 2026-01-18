@@ -3,7 +3,7 @@
   "pattern": [
     "WWW"
   ],
-  "key": {,
+  "key": {
     "W": { "item": "minecraft:red_wool" }
   },
   "result": { "item": "underthestars:red_sleeping_bag", "count": 1 }

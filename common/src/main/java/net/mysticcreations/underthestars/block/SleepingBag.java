@@ -146,7 +146,7 @@ public class SleepingBag extends BedBlock {
     }
 
     public Either<Player.BedSleepingProblem, Unit> makePlayerSleep(ServerPlayer player, BlockPos bedPos) {
-        Direction direction = (Direction) player.level().getBlockState(bedPos).getValue(HorizontalDirectionalBlock.FACING);
+        Direction direction = player.level().getBlockState(bedPos).getValue(HorizontalDirectionalBlock.FACING);
 
         if (!player.isSleeping() && player.isAlive()) {
             if (!player.level().dimensionType().natural()) {
@@ -156,8 +156,6 @@ public class SleepingBag extends BedBlock {
             } else if (bedBlocked(bedPos, direction, player)) {
                 return Either.left(Player.BedSleepingProblem.OBSTRUCTED);
             } else {
-                //player.setRespawnPosition(player.level().dimension(), bedPos, player.getYRot(), false, true);
-
                 if (player.level().isDay()) {
                     return Either.left(Player.BedSleepingProblem.NOT_POSSIBLE_NOW);
                 } else {

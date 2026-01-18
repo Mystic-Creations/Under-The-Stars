@@ -44,6 +44,8 @@
   "block.underthestars.stripped_hollow_mangrove_log": "Stripped Hollow Mangrove Log",
   "block.underthestars.stripped_hollow_cherry_log": "Stripped Hollow Cherry Log",
   "block.underthestars.white_tent": "Tent",
+  "advancements.underthestars.get_kelp.title": "Kelp Calm And Carry On",
+  "advancements.underthestars.get_kelp.descr": "Get Kelp from the ocean",
   "advancements.underthestars.eat_kelp_gelatin.title": "Tastes Like Bones",
   "advancements.underthestars.eat_kelp_gelatin.descr": "Eat some Kelp Gelatin",
   "advancements.underthestars.marshmallow.title": "Squishy!",
@@ -52,7 +54,7 @@
   "advancements.underthestars.cooked_marshmallow.descr": "Cook a Marshmallow",
   "advancements.underthestars.cooked_marshmallow_on_a_stick.title": "Camp Cooking",
   "advancements.underthestars.cooked_marshmallow_on_a_stick.descr": "Cook a Marshmallow on a Stick",
-  "advancements.underthestars.cocoa_beans.title": "", // Can't think of a name
+  "advancements.underthestars.cocoa_beans.title": "Bean There, Done That",
   "advancements.underthestars.cocoa_beans.descr": "Collect some Cocoa Beans",
   "advancements.underthestars.chocolate_bar.title": "Pure Imagination",
   "advancements.underthestars.chocolate_bar.descr": "Make a Chocolate Bar",
@@ -60,10 +62,12 @@
   "advancements.underthestars.biscuit.descr": "Make some Biscuits",
   "advancements.underthestars.smore.title": "Scout's Favorite",
   "advancements.underthestars.smore.descr": "Make and eat a Smore",
+  "advancement.underthestars.parrot_tame_with_biscuit.title": "Molly Wants a Cracker!",
+  "advancement.underthestars.parrot_tame_with_biscuit.descr": "Tame a Parrot with Biscuits",
   "advancement.underthestars.stargazing.title": "Stargazing",
   "advancement.underthestars.stargazing.descr": "Look up and see the stars on the night sky",
   "advancement.underthestars.campfire.title": "Healing Warmth",
   "advancement.underthestars.campfire.descr": "Place down a Campfire",
   "advancement.underthestars.sleeping_bag.title": "Snoozing Away",
-  "advancement.underthestars.sleeping_bag.descr": "Sleep in a Sleeping bag"
+  "advancement.underthestars.sleeping_bag.descr": "Skip the night tucked in a Sleeping Bag"
 }

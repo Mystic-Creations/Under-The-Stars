@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "underthestars:biscuit"
+    },
+    "title": {
+      "translate": "advancement.underthestars.parrot_tame_with_biscuit.title"
+    },
+    "description": {
+      "translate": "advancement.underthestars.parrot_tame_with_biscuit.descr"
+    },
+    "announce_to_chat": false
+  },
+  "parent": "minecraft:husbandry/tame_an_animal",
+  "criteria": {
+    "tame_animal": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "tame_animal"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
