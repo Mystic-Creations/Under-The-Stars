@@ -10,7 +10,9 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
+import net.mysticcreations.underthestars.UnderTheStars;
 import net.mysticcreations.underthestars.mixin.PlayerAccessor;
+import org.apache.logging.log4j.core.jmx.Server;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.core.BlockPos;
@@ -204,21 +206,21 @@ public class SleepingBag extends BedBlock {
         return Math.abs(player.getX() - vec3.x()) <= (double)3.0F && Math.abs(player.getY() - vec3.y()) <= (double)2.0F && Math.abs(player.getZ() - vec3.z()) <= (double)3.0F;
     }
 
-    private boolean bedBlocked(BlockPos pos, Direction direction, Player player) {
+    private boolean bedBlocked(BlockPos pos, Direction direction, ServerPlayer player) {
         BlockPos blockPos = pos.above();
         return !freeAt(blockPos, player) || !freeAt(blockPos.relative(direction.getOpposite()), player);
     }
 
-    protected boolean freeAt(BlockPos pos, Player player) {
+    protected boolean freeAt(BlockPos pos, ServerPlayer player) {
         return !player.level().getBlockState(pos).isSuffocating(player.level(), pos);
     }
 
-    public void startSleeping(BlockPos pos, Player player) {
+    public void startSleeping(BlockPos pos, ServerPlayer player) {
+        if (!UnderTheStars.hasAdvancement(player, "exploration/sleeping_bag"))
+            UnderTheStars.grantAdvancement(player, "exploration/sleeping_bag");
         if (player.isPassenger()) {
             player.stopRiding();
         }
-
-        BlockState blockstate = player.level().getBlockState(pos);
 
         player.setPose(Pose.SLEEPING);
         player.setPos((double)pos.getX() + (double)0.5F, (double)pos.getY() + (double)0.6875F, (double)pos.getZ() + (double)0.5F);
@@ -227,7 +229,7 @@ public class SleepingBag extends BedBlock {
         player.hasImpulse = true;
     }
 
-    public Either<Player.BedSleepingProblem, Unit> startSleepInBed(BlockPos bedPos,Player player) {
+    public Either<Player.BedSleepingProblem, Unit> startSleepInBed(BlockPos bedPos,ServerPlayer player) {
         this.startSleeping(bedPos,player);
         ((PlayerAccessor)player).setSleepCounter(0);
         return Either.right(Unit.INSTANCE);
