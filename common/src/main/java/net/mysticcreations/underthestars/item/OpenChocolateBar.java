@@ -51,7 +51,6 @@ public class OpenChocolateBar extends Item {
                 150,
                 0
             ));
-
             stack.shrink(1);
         }
 

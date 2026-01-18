@@ -41,6 +41,8 @@ public class UtsItems {
     public static final RegistrySupplier<Item> OPEN_CHOCOLATE_BAR = REGISTRY.register("open_chocolate_bar", OpenChocolateBar::new);
     public static final RegistrySupplier<Item> WRAPPED_CHOCOLATE_BAR = REGISTRY.register("wrapped_chocolate_bar", WrappedChocolateBar::new);
     public static final RegistrySupplier<Item> CHOCOLATE_PIECE = REGISTRY.register("chocolate_piece", ChocolatePiece::new);
+    public static final RegistrySupplier<Item> BISCUIT = REGISTRY.register("biscuit", Biscuit::new);
+    //public static final RegistrySupplier<Item> SMORE = REGISTRY.register("smore", Smore::new);
 
     public static void register() {
         REGISTRY.register();

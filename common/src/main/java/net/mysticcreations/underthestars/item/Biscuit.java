@@ -7,6 +7,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.animal.Parrot;
 import net.minecraft.world.entity.animal.Wolf;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
@@ -18,12 +19,12 @@ import net.minecraft.world.level.Level;
 
 import java.util.List;
 
-public class ChocolateBar extends Item {
-	public ChocolateBar() {
+public class Biscuit extends Item {
+	public Biscuit() {
 		super(new Properties()
-            .stacksTo(16)
+            .stacksTo(64)
             .rarity(Rarity.COMMON)
-            .food((new FoodProperties.Builder()).nutrition(7).saturationMod(0.6f)
+            .food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.5f)
                 .build()
             ));
 	}
@@ -42,20 +43,15 @@ public class ChocolateBar extends Item {
     public InteractionResult interactLivingEntity(ItemStack stack, Player player, LivingEntity target, InteractionHand hand) {
         Level level = player.level();
 
-        if (!(target instanceof Wolf wolf)) {
+        if (!(target instanceof Parrot parrot)) {
             return InteractionResult.PASS;
         }
         if (!level.isClientSide) {
-            wolf.addEffect(new MobEffectInstance(
-                MobEffects.POISON,
-                150,
-                0
-            ));
+            parrot.canBreed();
             stack.shrink(1);
         }
 
         return InteractionResult.sidedSuccess(level.isClientSide);
     }
 }
-
 

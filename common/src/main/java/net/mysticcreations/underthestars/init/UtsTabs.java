@@ -41,6 +41,8 @@ public class UtsTabs {
                 tabData.accept(UtsItems.OPEN_CHOCOLATE_BAR.get());
                 tabData.accept(UtsItems.WRAPPED_CHOCOLATE_BAR.get());
                 tabData.accept(UtsItems.CHOCOLATE_PIECE.get());
+                tabData.accept(UtsItems.BISCUIT.get());
+                //tabData.accept(UtsItems.SMORE.get());
             }).build());
 
     public static void register() {
