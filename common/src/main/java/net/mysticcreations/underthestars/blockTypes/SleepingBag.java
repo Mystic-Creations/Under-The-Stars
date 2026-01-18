@@ -1,5 +1,16 @@
 package net.mysticcreations.underthestars.blockTypes;
 
+import com.mojang.datafixers.util.Either;
+import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.stats.Stats;
+import net.minecraft.util.Unit;
+import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.Vec3;
+import net.mysticcreations.underthestars.mixin.PlayerAccessor;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.core.BlockPos;
@@ -14,11 +25,6 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.BedBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.RenderShape;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -31,6 +37,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+
+import java.util.List;
 
 public abstract class SleepingBag extends BedBlock {
 
@@ -128,14 +136,100 @@ public abstract class SleepingBag extends BedBlock {
             return InteractionResult.SUCCESS;
         }
 
-        var result = player.startSleepInBed(footPos);
+        var result = makePlayerSleep((ServerPlayer) player,footPos);
         result.left().ifPresent(problem ->
             player.displayClientMessage(problem.getMessage(), true));
 
-        if (player instanceof ServerPlayer sp) {
-            sp.setRespawnPosition(world.dimension(), null, 0.0F, false, false);
+        return InteractionResult.SUCCESS;
+    }
+
+    public Either<Player.BedSleepingProblem, Unit> makePlayerSleep(ServerPlayer player, BlockPos bedPos) {
+        Direction direction = (Direction) player.level().getBlockState(bedPos).getValue(HorizontalDirectionalBlock.FACING);
+
+        if (!player.isSleeping() && player.isAlive()) {
+            if (!player.level().dimensionType().natural()) {
+                return Either.left(Player.BedSleepingProblem.NOT_POSSIBLE_HERE);
+            } else if (!bedInRange(bedPos, direction, player)) {
+                return Either.left(Player.BedSleepingProblem.TOO_FAR_AWAY);
+            } else if (bedBlocked(bedPos, direction, player)) {
+                return Either.left(Player.BedSleepingProblem.OBSTRUCTED);
+            } else {
+                //player.setRespawnPosition(player.level().dimension(), bedPos, player.getYRot(), false, true);
+
+                if (player.level().isDay()) {
+                    return Either.left(Player.BedSleepingProblem.NOT_POSSIBLE_NOW);
+                } else {
+                    if (!player.isCreative()) {
+                        double d = 8.0;
+                        double e = 5.0;
+                        Vec3 vec3 = Vec3.atBottomCenterOf(bedPos);
+                        List<Monster> list = player.level().getEntitiesOfClass(
+                                Monster.class,
+                                new AABB(
+                                        vec3.x() - d, vec3.y() - e, vec3.z() - d,
+                                        vec3.x() + d, vec3.y() + e, vec3.z() + d
+                                ),
+                                (monster) -> monster.isPreventingPlayerRest(player)
+                        );
+
+                        if (!list.isEmpty()) {
+                            return Either.left(Player.BedSleepingProblem.NOT_SAFE);
+                        }
+                    }
+
+                    Either<Player.BedSleepingProblem, Unit> either = this.startSleepInBed(bedPos, player).ifRight((unit) -> {
+                        player.awardStat(Stats.SLEEP_IN_BED);
+                        CriteriaTriggers.SLEPT_IN_BED.trigger((ServerPlayer) player);
+                    });
+
+                    if (!player.serverLevel().canSleepThroughNights()) {
+                        player.displayClientMessage(Component.translatable("sleep.not_possible"), true);
+                    }
+
+                    ((ServerLevel) player.level()).updateSleepingPlayerList();
+                    return either;
+                }
+            }
+        } else {
+            return Either.left(Player.BedSleepingProblem.OTHER_PROBLEM);
+        }
+    }
+
+    private boolean bedInRange(BlockPos pos, Direction direction, Player player) {
+        return isReachableBedBlock(pos, player) || isReachableBedBlock(pos.relative(direction.getOpposite()), player);
+    }
+
+    private boolean isReachableBedBlock(BlockPos pos, Player player) {
+        Vec3 vec3 = Vec3.atBottomCenterOf(pos);
+        return Math.abs(player.getX() - vec3.x()) <= (double)3.0F && Math.abs(player.getY() - vec3.y()) <= (double)2.0F && Math.abs(player.getZ() - vec3.z()) <= (double)3.0F;
+    }
+
+    private boolean bedBlocked(BlockPos pos, Direction direction, Player player) {
+        BlockPos blockPos = pos.above();
+        return !freeAt(blockPos, player) || !freeAt(blockPos.relative(direction.getOpposite()), player);
+    }
+
+    protected boolean freeAt(BlockPos pos, Player player) {
+        return !player.level().getBlockState(pos).isSuffocating(player.level(), pos);
+    }
+
+    public void startSleeping(BlockPos pos, Player player) {
+        if (player.isPassenger()) {
+            player.stopRiding();
         }
 
-        return InteractionResult.SUCCESS;
+        BlockState blockstate = player.level().getBlockState(pos);
+
+        player.setPose(Pose.SLEEPING);
+        player.setPos((double)pos.getX() + (double)0.5F, (double)pos.getY() + (double)0.6875F, (double)pos.getZ() + (double)0.5F);
+        player.setSleepingPos(pos);
+        player.setDeltaMovement(Vec3.ZERO);
+        player.hasImpulse = true;
+    }
+
+    public Either<Player.BedSleepingProblem, Unit> startSleepInBed(BlockPos bedPos,Player player) {
+        this.startSleeping(bedPos,player);
+        ((PlayerAccessor)player).setSleepCounter(0);
+        return Either.right(Unit.INSTANCE);
     }
 }
