@@ -2,7 +2,24 @@ run/
 .idea/
 .vscode/
 .gradle/
+.settings/
 build/
+bin/
+fabric/run
+fabric/build
+fabric/.gradle
+quilt/run
+quilt/build
+quilt/.gradle
+forge/run
+forge/build
+forge/.gradle
+neoforge/run
+neoforge/.gradle
+neoforge/build
+common/run
+common/build
+common/.gradle
 
 # Compiled class file
 *.class
@@ -28,7 +45,3 @@ build/
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
-
-# macos
-.DS_Store
-.mcreator

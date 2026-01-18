@@ -1,0 +1,33 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+issueTrackerURL = "https://github.com/Mystic-Creations/Under-The-Stars/issues"
+license = "MIT"
+
+[[mods]]
+modId = "underthestars"
+version = "${mod_version}"
+displayName = "Under The Stars"
+description = "A small and simple mod about camping"
+authors = "Mystic Creations Team"
+logoFile = "icon.png"
+
+[[dependencies.underthestars]]
+modId = "forge"
+mandatory = true
+versionRange = "[${forge_version_range},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.underthestars]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[${minecraft_version}]"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.underthestars]]
+modId = "architectury"
+mandatory = true
+versionRange = "[${architectury_api_version},)"
+ordering = "AFTER"
+side = "BOTH"
