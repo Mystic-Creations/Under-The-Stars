@@ -41,14 +41,22 @@ public class Biscuit extends Item {
 
     @Override
     public InteractionResult interactLivingEntity(ItemStack stack, Player player, LivingEntity target, InteractionHand hand) {
-        Level level = player.level();
-
         if (!(target instanceof Parrot parrot)) {
             return InteractionResult.PASS;
         }
+        Level level = player.level();
+
+        if (parrot.isTame()) {
+            return InteractionResult.PASS;
+        }
         if (!level.isClientSide) {
-            parrot.canBreed();
             stack.shrink(1);
+            if (level.random.nextInt(3) == 0) {
+                parrot.tame(player);
+                parrot.setOrderedToSit(false);
+            } else {
+                parrot.level().broadcastEntityEvent(parrot, (byte) 6);
+            }
         }
 
         return InteractionResult.sidedSuccess(level.isClientSide);
