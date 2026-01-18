@@ -1,4 +1,4 @@
-package net.justmili.underthestars.init;
+package net.mysticcreations.underthestars.init;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTab;
@@ -8,10 +8,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Registry;
-
-import net.justmili.underthestars.UnderTheStars;
-
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.mysticcreations.underthestars.UnderTheStars;
 
 public class UnderTheStarsTabs {
 	public static ResourceKey<CreativeModeTab> UNDER_THE_STARS = ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(UnderTheStars.MODID, "under_the_stars"));

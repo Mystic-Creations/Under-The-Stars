@@ -1,5 +1,4 @@
-  // still no items drop
-package net.justmili.underthestars.block;
+package net.mysticcreations.underthestars.block;
 
 import org.jetbrains.annotations.Nullable;
 
@@ -67,7 +66,6 @@ public class WhiteSleepingBag extends BedBlock {
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         Direction direction = state.getValue(FACING);
         BedPart part = state.getValue(PART);
-        VoxelShape bagShape = BAG;
         VoxelShape pillowShape = Shapes.empty();
 
         if (part == BedPart.HEAD) {
@@ -79,7 +77,7 @@ public class WhiteSleepingBag extends BedBlock {
             }
         }
 
-        return Shapes.or(bagShape, pillowShape);
+        return Shapes.or(BAG, pillowShape);
     }
 
     @Override

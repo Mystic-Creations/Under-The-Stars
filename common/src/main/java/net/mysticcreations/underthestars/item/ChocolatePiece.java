@@ -1,5 +1,5 @@
 
-package net.justmili.underthestars.item;
+package net.mysticcreations.underthestars.item;
 
 import java.util.List;
 
@@ -15,10 +15,12 @@ import net.minecraft.world.level.Level;
 
 public class ChocolatePiece extends Item {
 	public ChocolatePiece() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(1).saturationMod(0.1f)
-
-				.build()));
-		ItemGroupEvents.modifyEntriesEvent(UnderTheStarsTabs.UNDER_THE_STARS).register(content -> content.accept(this));
+		super(new Item.Properties()
+            .stacksTo(64)
+            .rarity(Rarity.COMMON)
+            .food((new FoodProperties.Builder()).nutrition(1).saturationMod(0.1f)
+                .build()
+            ));
 	}
 
 	@Override

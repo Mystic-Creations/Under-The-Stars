@@ -6,6 +6,7 @@
   "client": [
   ],
   "mixins": [
+    "UnderTheStarsRIRMixin"
   ],
   "injectors": {
     "defaultRequire": 1

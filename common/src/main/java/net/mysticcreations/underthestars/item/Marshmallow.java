@@ -1,5 +1,5 @@
 
-package net.justmili.underthestars.item;
+package net.mysticcreations.underthestars.item;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.TooltipFlag;
@@ -15,9 +15,9 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 
 import java.util.List;
 
-public class KelpGelatin extends Item {
-	public KelpGelatin() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(3).saturationMod(0.6f)
+public class Marshmallow extends Item {
+	public Marshmallow() {
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.4f)
 
 				.build()));
 		ItemGroupEvents.modifyEntriesEvent(UnderTheStarsTabs.UNDER_THE_STARS).register(content -> content.accept(this));
@@ -25,7 +25,7 @@ public class KelpGelatin extends Item {
 
 	@Override
 	public int getUseDuration(ItemStack itemstack) {
-		return 32;
+		return 16;
 	}
 
 	@Override

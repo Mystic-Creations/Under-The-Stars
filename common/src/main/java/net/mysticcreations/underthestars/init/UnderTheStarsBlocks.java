@@ -1,17 +1,13 @@
-package net.justmili.underthestars.init;
+package net.mysticcreations.underthestars.init;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-
-import net.justmili.underthestars.UnderTheStars;
-import net.justmili.underthestars.block.WhiteSleepingBag;
-import net.justmili.underthestars.init.UnderTheStarsTabs;  
 import net.minecraft.world.item.Item.Properties;
+import net.mysticcreations.underthestars.UnderTheStars;
 
 public class UnderTheStarsBlocks {
     public static final Block WHITE_SLEEPING_BAG = registerBlock("white_sleeping_bag", new WhiteSleepingBag());

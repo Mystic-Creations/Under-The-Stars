@@ -1,9 +1,14 @@
 package net.mysticcreations.underthestars;
 
+import net.minecraft.resources.ResourceLocation;
+
 public final class UnderTheStars {
-    public static final String MOD_ID = "underthestars";
+    public static final String MODID = "underthestars";
 
     public static void init() {
-        // Write common init code here.
+    }
+
+    public static ResourceLocation asResource(String path) {
+        return new ResourceLocation(MODID, path);
     }
 }

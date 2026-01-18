@@ -1,5 +1,5 @@
 
-package net.justmili.underthestars.item;
+package net.mysticcreations.underthestars.item;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.TooltipFlag;
@@ -12,18 +12,16 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.network.chat.Component;
 
-import net.justmili.underthestars.init.UnderTheStarsTabs;
-
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-
 import java.util.List;
 
-public class MarshmallowOnAStick extends Item {
-	public MarshmallowOnAStick() {
-		super(new Item.Properties().stacksTo(4).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.4f)
-
-				.build()));
-		ItemGroupEvents.modifyEntriesEvent(UnderTheStarsTabs.UNDER_THE_STARS).register(content -> content.accept(this));
+public class CookedMarshmallowOnAStick extends Item {
+	public CookedMarshmallowOnAStick() {
+		super(new Item.Properties()
+            .stacksTo(4)
+            .rarity(Rarity.COMMON)
+            .food((new FoodProperties.Builder()).nutrition(4).saturationMod(1f)
+				.build()
+            ));
 	}
 
 	@Override

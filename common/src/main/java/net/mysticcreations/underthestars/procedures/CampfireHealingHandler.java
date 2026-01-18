@@ -1,4 +1,4 @@
-package net.justmili.underthestars.procedures;
+package net.mysticcreations.underthestars.procedures;
 
 import java.util.Map;
 import java.util.UUID;

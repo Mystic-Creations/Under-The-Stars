@@ -1,13 +1,5 @@
-package net.justmili.underthestars.init;
+package net.mysticcreations.underthestars.init;
 
-import net.justmili.underthestars.UnderTheStars;
-import net.justmili.underthestars.item.ChocolateBar;
-import net.justmili.underthestars.item.ChocolatePiece;
-import net.justmili.underthestars.item.CookedMarshmallow;
-import net.justmili.underthestars.item.CookedMarshmallowOnAStick;
-import net.justmili.underthestars.item.KelpGelatin;
-import net.justmili.underthestars.item.Marshmallow;
-import net.justmili.underthestars.item.MarshmallowOnAStick;
 import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.Registry;
@@ -15,6 +7,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.mysticcreations.underthestars.UnderTheStars;
 
 public class UnderTheStarsItems {
 	public static Item KELP_GELATIN;
