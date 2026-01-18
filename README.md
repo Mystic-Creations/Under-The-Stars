@@ -1,5 +1,16 @@
-# Under_The_Stars
-Under the Stars is a peaceful and immersive Minecraft mod all about camping, exploring, and embracing the quiet beauty of the wilderness. Settle down beneath a starlit sky, roast food by the campfire, and lose yourself in the light of the stars. Whether you're embarking on a long journey or just want a quiet spot to rest, this mod adds charming and cozy touches to make your adventure feel like home.
+![Titlecard](https://cdn.modrinth.com/data/cached_images/1be2f29c44032170150c01fbb67cb8da8129f69a.png)
 
-From sleeping bags to crackling fires, glowing stars to gentle ambiance, Under the Stars turns your world into a place worth slowing down for.
+<pre><center>"Gather 'round the fire"</center></pre>
 
+<hr>
+
+# Description
+**Under The Stars** is a small camping mod, mainly designed just so you can enjoy some snacks and enjoy the scenery of the minecraft world at night, sleeping under the stars, sitting around the campfire alone or with friends, simply having fun. Although, the mod also provides some useful features like sleeping bags, tents which let you sleep even if monsters are nearby as well as some decorational blocks like hollow logs and such.
+
+
+<details>
+<summary>Recommended Additions</summary>
+We recommend playing Under The Stars along with mods like LambDynamicLights, AmbientSounds, Sit! and some worldgen mods for a bit more of a camping mood.
+</details>
+
+Having issues, need to report a bug or just want to chat? Join our [official community Discord server](https://discord.gg/7D7CpcvgcA)!
