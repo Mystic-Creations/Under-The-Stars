@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "underthestars:cyan_sleeping_bag"
+    },
+    "title": {
+      "translate": "advancement.underthestars.sleeping_bag.title"
+    },
+    "description": {
+      "translate": "advancement.underthestars.sleeping_bag.descr"
+    }
+  },
+  "parent": "underthestars:exploration/campfire",
+  "criteria": {
+    "sleep": {
+      "trigger": "minecraft:slept_in_bed",
+      "conditions": {
+        "player": {}
+      }
+    }
+  },
+  "requirements": [
+    [
+      "sleep"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
