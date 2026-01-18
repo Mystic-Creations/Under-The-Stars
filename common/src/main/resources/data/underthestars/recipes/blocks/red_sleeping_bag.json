@@ -1,11 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "# #",
     "WWW"
   ],
-  "key": {
-    "#": { "item": "minecraft:string" },
+  "key": {,
     "W": { "item": "minecraft:red_wool" }
   },
   "result": { "item": "underthestars:red_sleeping_bag", "count": 1 }
