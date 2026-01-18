@@ -30,7 +30,7 @@ public final class UnderTheStars {
     }
     public static boolean hasAdvancement(ServerPlayer player, String AdvancementID) {
         return player.getAdvancements().getOrStartProgress(
-            player.server.getAdvancements().getAdvancement(new ResourceLocation(AdvancementID))
+            player.server.getAdvancements().getAdvancement(asResource(AdvancementID))
         ).isDone();
     }
     public static void grantAdvancement(ServerPlayer player, String AdvancementID) {

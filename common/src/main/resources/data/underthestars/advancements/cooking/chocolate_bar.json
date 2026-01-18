@@ -32,5 +32,6 @@
     [
       "chocolate_bar"
     ]
-  ]
+  ],
+  "sends_telemetry_event": true
 }

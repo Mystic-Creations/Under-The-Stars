@@ -14,7 +14,7 @@ public class StargazingAdvancement {
         float pitch = serverPlayer.getXRot();
         if (pitch > -30.0F || pitch < -90.0F) return;
 
-        if (UnderTheStars.hasAdvancement(serverPlayer, "underthestars:stargazing")) return;
-        UnderTheStars.grantAdvancement(serverPlayer, "underthestars:stargazing");
+        if (UnderTheStars.hasAdvancement(serverPlayer, "exploration/stargazing")) return;
+        UnderTheStars.grantAdvancement(serverPlayer, "exploration/stargazing");
     }
 }

@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:campfire"
+    },
+    "title": {
+      "translate": "advancement.underthestars.campfire.title"
+    },
+    "description": {
+      "translate": "advancement.underthestars.campfire.descr"
+    }
+  },
+  "parent": "minecraft:adventure/root",
+  "criteria": {
+    "place_block": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "player": {},
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "minecraft:campfire"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "place_block"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

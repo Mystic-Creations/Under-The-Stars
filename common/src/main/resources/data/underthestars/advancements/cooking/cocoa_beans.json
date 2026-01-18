@@ -38,5 +38,6 @@
       "underthestars:chocolate_piece_to_bar"
     ],
     "experience": 5
-  }
+  },
+  "sends_telemetry_event": true
 }
