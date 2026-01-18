@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "underthestars:biscuit"
+    },
+    {
+      "item": "underthestars:cooked_marshmallow"
+    },
+    {
+      "item": "underthestars:chocolate_bar"
+    },
+    {
+      "item": "underthestars:biscuit"
+    }
+  ],
+  "result": {
+    "item": "underthestars:smore",
+    "count": 1
+  }
+}
