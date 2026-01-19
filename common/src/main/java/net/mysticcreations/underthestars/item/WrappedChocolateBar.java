@@ -34,6 +34,8 @@ public class WrappedChocolateBar extends Item {
                 stack.shrink(1);
                 player.setItemInHand(hand, openBar);
             }
+
+            //TODO: Add custom unwrapping sound
             player.playSound(SoundEvents.BUNDLE_DROP_CONTENTS, 1.0F, 1.0F);
         }
 

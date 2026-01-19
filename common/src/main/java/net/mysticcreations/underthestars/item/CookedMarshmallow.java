@@ -16,7 +16,7 @@ public class CookedMarshmallow extends Item {
 		super(new Item.Properties()
             .stacksTo(64)
             .rarity(Rarity.COMMON)
-            .food((new FoodProperties.Builder()).nutrition(4).saturationMod(1f)
+            .food((new FoodProperties.Builder()).nutrition(2).saturationMod(4.5f)
 				.build()
             ));
 	}

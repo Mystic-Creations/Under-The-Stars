@@ -16,7 +16,7 @@ public class KelpGelatin extends Item {
 		super(new Item.Properties()
             .stacksTo(64)
             .rarity(Rarity.COMMON)
-            .food((new FoodProperties.Builder()).nutrition(3).saturationMod(0.6f)
+            .food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.5f)
 				.build()
             ));
 	}

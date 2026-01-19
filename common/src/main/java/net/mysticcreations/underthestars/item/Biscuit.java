@@ -1,16 +1,12 @@
 
 package net.mysticcreations.underthestars.item;
 
-import dev.architectury.event.events.common.TickEvent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.animal.Parrot;
-import net.minecraft.world.entity.animal.Wolf;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
@@ -27,7 +23,7 @@ public class Biscuit extends Item {
 		super(new Properties()
             .stacksTo(64)
             .rarity(Rarity.COMMON)
-            .food((new FoodProperties.Builder()).nutrition(4).saturationMod(0.5f)
+            .food((new FoodProperties.Builder()).nutrition(3).saturationMod(0.6f)
                 .build()
             ));
 	}

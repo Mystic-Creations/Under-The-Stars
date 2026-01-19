@@ -4,6 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
@@ -20,19 +21,20 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.mysticcreations.underthestars.init.UtsEffects;
 
 public class Smore extends Block {
     public static final IntegerProperty COUNT = IntegerProperty.create("count", 1, 3);
     public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.Plane.HORIZONTAL);
-    private static final VoxelShape SINGLE = Block.box(2, 0, 2, 14, 4, 14);
+    private static final VoxelShape SINGLE = Block.box(2, 0, 2, 14, 4, 14); //TODO: Adjust bound size
     private static final VoxelShape DOUBLE = Block.box(1, 0, 1, 15, 6, 15);
-    private static final VoxelShape TRIPLE = Block.box(0, 0, 0, 16, 8, 16);
+    private static final VoxelShape TRIPLE = Block.box(0, 0, 0, 16, 8, 16); //TODO: Adjust bound size
 
     public Smore() {
         super(Properties.of()
-            .mapColor(MapColor.WOOL)
+            .mapColor(MapColor.WOOL) //TODO: Change
             .strength(0.4F)
-            .sound(SoundType.WOOL)
+            .sound(SoundType.WOOL) //TODO: Change
             .noOcclusion()
             .lightLevel(state -> 0)
             .isSuffocating((bs, br, bp) -> false)
@@ -89,7 +91,9 @@ public class Smore extends Block {
         }
 
         if (!level.isClientSide) {
-            player.getFoodData().eat(2, 0.3F);
+            player.getFoodData().eat(2, 15.0F);
+
+            player.addEffect(new MobEffectInstance(UtsEffects.SUGAR_RUSH.get(), 6000, 0));
 
             int count = state.getValue(COUNT);
             if (count > 1) {

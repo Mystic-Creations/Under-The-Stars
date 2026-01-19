@@ -23,7 +23,7 @@ public class ChocolatePiece extends Item {
 		super(new Item.Properties()
             .stacksTo(64)
             .rarity(Rarity.COMMON)
-            .food((new FoodProperties.Builder()).nutrition(1).saturationMod(0.1f)
+            .food((new FoodProperties.Builder()).nutrition(0).saturationMod(0.15f)
                 .build()
             ));
 	}

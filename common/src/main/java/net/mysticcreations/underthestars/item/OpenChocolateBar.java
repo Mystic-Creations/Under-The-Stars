@@ -23,7 +23,7 @@ public class OpenChocolateBar extends Item {
 		super(new Properties()
             .stacksTo(16)
             .rarity(Rarity.COMMON)
-            .food((new FoodProperties.Builder()).nutrition(7).saturationMod(0.6f)
+            .food((new FoodProperties.Builder()).nutrition(7).saturationMod(1.2f)
                 .build()
             ));
 	}
