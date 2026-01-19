@@ -1,5 +1,6 @@
 package net.mysticcreations.underthestars;
 
+import dev.architectury.event.events.common.InteractionEvent;
 import dev.architectury.event.events.common.TickEvent;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementProgress;
@@ -11,6 +12,7 @@ import net.mysticcreations.underthestars.init.UtsEffects;
 import net.mysticcreations.underthestars.init.UtsItems;
 import net.mysticcreations.underthestars.init.UtsTabs;
 import net.mysticcreations.underthestars.mechanics.HealingCampfire;
+import net.mysticcreations.underthestars.mechanics.SugarRushInsomnia;
 import net.mysticcreations.underthestars.mechanics.logic.StargazingAdvancement;
 
 public final class UnderTheStars {
@@ -26,6 +28,7 @@ public final class UnderTheStars {
     public static void registerEvents() {
         TickEvent.PLAYER_POST.register(HealingCampfire::onPlayerTick);
         TickEvent.PLAYER_POST.register(StargazingAdvancement::onPlayerTick);
+        InteractionEvent.RIGHT_CLICK_BLOCK.register(SugarRushInsomnia::onSleepAttempt);
     }
 
     public static ResourceLocation asResource(String path) {
