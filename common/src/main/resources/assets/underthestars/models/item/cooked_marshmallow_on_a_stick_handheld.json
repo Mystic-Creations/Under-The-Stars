@@ -4,7 +4,7 @@
 	"texture_size": [32, 32],
 	"textures": {
 		"0": "underthestars:item/3d/cooked_marshmallow_on_a_stick",
-		"particle": "underthestars:block/3d/cooked_marshmallow_on_a_stick"
+		"particle": "underthestars:item/3d/cooked_marshmallow_on_a_stick"
 	},
 	"elements": [
 		{

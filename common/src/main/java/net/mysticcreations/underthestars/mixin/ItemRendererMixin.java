@@ -33,7 +33,7 @@ public abstract class ItemRendererMixin {
             );
         }
         return renderer.getItemModelShaper().getModelManager().getModel(
-            UnderTheStars.asModelResource("marshmallow_on_a_stick_handheld", "block")
+            UnderTheStars.asModelResource("marshmallow_on_a_stick_handheld", "inventory")
         );
     }
     @ModifyVariable(
@@ -54,7 +54,7 @@ public abstract class ItemRendererMixin {
             );
         }
         return renderer.getItemModelShaper().getModelManager().getModel(
-            UnderTheStars.asModelResource("cooked_marshmallow_on_a_stick_handheld", "block")
+            UnderTheStars.asModelResource("cooked_marshmallow_on_a_stick_handheld", "inventory")
         );
     }
 }
