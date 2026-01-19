@@ -32,5 +32,10 @@
       "inventory_changed"
     ]
   ],
+  "rewards": {
+    "recipes": [
+      "underthestars:smore"
+    ]
+  },
   "sends_telemetry_event": true
 }

@@ -1,6 +1,7 @@
 
 package net.mysticcreations.underthestars.item;
 
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Rarity;
@@ -11,6 +12,7 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.network.chat.Component;
+import net.mysticcreations.underthestars.UnderTheStars;
 
 import java.util.List;
 

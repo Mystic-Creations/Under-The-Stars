@@ -22,7 +22,9 @@
     "main": [
       "net.mysticcreations.underthestars.fabric.UnderTheStarsFabric"
     ],
-    "client": []
+    "client": [
+      "net.mysticcreations.underthestars.fabric.client.FabricClient"
+    ]
   },
   "mixins": [
     "underthestars.mixins.json"

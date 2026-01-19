@@ -35,6 +35,7 @@
   "rewards": {
     "recipes": [
       "underthestars:chocolate_bar",
+      "underthestars:wrapped_chocolate_bar",
       "underthestars:chocolate_piece",
       "underthestars:chocolate_piece_to_bar"
     ],
