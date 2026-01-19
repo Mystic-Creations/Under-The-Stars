@@ -7,6 +7,7 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.mysticcreations.underthestars.init.UtsBlocks;
+import net.mysticcreations.underthestars.init.UtsEffects;
 import net.mysticcreations.underthestars.init.UtsItems;
 import net.mysticcreations.underthestars.init.UtsTabs;
 import net.mysticcreations.underthestars.mechanics.HealingCampfire;
@@ -19,6 +20,7 @@ public final class UnderTheStars {
         UtsBlocks.register();
         UtsItems.register();
         UtsTabs.register();
+        UtsEffects.register();
         registerEvents();
     }
     public static void registerEvents() {

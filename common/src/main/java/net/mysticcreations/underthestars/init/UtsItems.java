@@ -31,6 +31,7 @@ public class UtsItems {
     public static final RegistrySupplier<Item> GREEN_SLEEPING_BAG = bedBlock(UtsBlocks.GREEN_SLEEPING_BAG);
     public static final RegistrySupplier<Item> RED_SLEEPING_BAG = bedBlock(UtsBlocks.RED_SLEEPING_BAG);
     public static final RegistrySupplier<Item> BLACK_SLEEPING_BAG = bedBlock(UtsBlocks.BLACK_SLEEPING_BAG);
+    public static final RegistrySupplier<Item> SMORE = block(UtsBlocks.SMORE);
 
     public static final RegistrySupplier<Item> KELP_GELATIN = REGISTRY.register("kelp_gelatin", KelpGelatin::new);
     public static final RegistrySupplier<Item> MARSHMALLOW = REGISTRY.register("marshmallow", Marshmallow::new);
@@ -42,7 +43,6 @@ public class UtsItems {
     public static final RegistrySupplier<Item> WRAPPED_CHOCOLATE_BAR = REGISTRY.register("wrapped_chocolate_bar", WrappedChocolateBar::new);
     public static final RegistrySupplier<Item> CHOCOLATE_PIECE = REGISTRY.register("chocolate_piece", ChocolatePiece::new);
     public static final RegistrySupplier<Item> BISCUIT = REGISTRY.register("biscuit", Biscuit::new);
-    //public static final RegistrySupplier<Item> SMORE = REGISTRY.register("smore", Smore::new);
 
     public static void register() {
         REGISTRY.register();

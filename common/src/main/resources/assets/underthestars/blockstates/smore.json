@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "count=1": {
+      "model": "underthestars:block/smore"
+    },
+    "count=2": {
+      "model": "underthestars:block/smore_double"
+    },
+    "count=3": {
+      "model": "underthestars:block/smore_triple"
+    }
+  }
+}

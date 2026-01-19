@@ -8,6 +8,7 @@ import net.minecraft.world.level.block.BedBlock;
 import net.minecraft.world.level.block.Block;
 import net.mysticcreations.underthestars.UnderTheStars;
 import net.mysticcreations.underthestars.block.SleepingBag;
+import net.mysticcreations.underthestars.block.Smore;
 
 public class UtsBlocks {
     public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(UnderTheStars.MODID, Registries.BLOCK);
@@ -28,6 +29,7 @@ public class UtsBlocks {
     public static final RegistrySupplier<BedBlock> GREEN_SLEEPING_BAG = REGISTRY.register("green_sleeping_bag", () -> new SleepingBag(DyeColor.GREEN));
     public static final RegistrySupplier<BedBlock> RED_SLEEPING_BAG = REGISTRY.register("red_sleeping_bag", () -> new SleepingBag(DyeColor.RED));
     public static final RegistrySupplier<BedBlock> BLACK_SLEEPING_BAG = REGISTRY.register("black_sleeping_bag", () -> new SleepingBag(DyeColor.BLACK));
+    public static final RegistrySupplier<Block> SMORE = REGISTRY.register("smore", Smore::new);
 
     public static void register() {
         REGISTRY.register();

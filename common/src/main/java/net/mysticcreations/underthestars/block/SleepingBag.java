@@ -43,7 +43,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import java.util.List;
 
 public class SleepingBag extends BedBlock {
-
     public static final EnumProperty<BedPart> PART = EnumProperty.create("part", BedPart.class);
     public static final BooleanProperty OCCUPIED = BooleanProperty.create("occupied");
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;

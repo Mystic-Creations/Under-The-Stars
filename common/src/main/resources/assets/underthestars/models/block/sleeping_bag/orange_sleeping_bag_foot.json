@@ -17,7 +17,7 @@
         "up": {"uv": [0.5, 4.75, 4.5, 8.75], "texture": "#0"},
         "down": {"uv": [6, 4.75, 10, 8.75], "texture": "#0"}
       }
-    },magenta_wool
+    }
   ],
   "display": {
     "thirdperson_righthand": {

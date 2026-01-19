@@ -9,8 +9,8 @@ import net.mysticcreations.underthestars.UnderTheStars;
 @Mod.EventBusSubscriber(modid = UnderTheStars.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ForgeClient {
     @SubscribeEvent
-    public static void registerAdditionalModels(ModelEvent.RegisterAdditional event) {
-        event.register(UnderTheStars.asModelResource("marshmallow_on_a_stick_handheld", "inventory"));
-        event.register(UnderTheStars.asModelResource("cooked_marshmallow_on_a_stick_handheld", "inventory"));
+    public static void registerAdditionalModels(ModelEvent.RegisterAdditional context) {
+        context.register(UnderTheStars.asModelResource("marshmallow_on_a_stick_handheld", "inventory"));
+        context.register(UnderTheStars.asModelResource("cooked_marshmallow_on_a_stick_handheld", "inventory"));
     }
 }
