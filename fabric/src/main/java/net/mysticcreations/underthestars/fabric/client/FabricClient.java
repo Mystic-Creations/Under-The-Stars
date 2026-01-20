@@ -8,8 +8,9 @@ public class FabricClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ModelLoadingPlugin.register((context) -> {
-            context.addModels(UnderTheStars.asModelResource("marshmallow_on_a_stick_handheld", "inventory"));
-            context.addModels(UnderTheStars.asModelResource("cooked_marshmallow_on_a_stick_handheld", "inventory"));
+            context.addModels(UnderTheStars.asModelResource("in_hand/marshmallow_on_a_stick", "inventory"));
+            context.addModels(UnderTheStars.asModelResource("in_hand/cooked_marshmallow_on_a_stick", "inventory"));
+            context.addModels(UnderTheStars.asModelResource("in_hand/smore", "inventory"));
         });
     }
 }

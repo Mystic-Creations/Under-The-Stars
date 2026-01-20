@@ -16,7 +16,7 @@ public class SugarRush extends MobEffect {
     private static final UUID HASTE_UUID = UUID.fromString("e91c4b6d-5f2a-4e3b-8d77-9f6b2c1a0e12");
 
     public SugarRush() {
-        super(MobEffectCategory.BENEFICIAL, 0xF5E16B); //TODO: Change color
+        super(MobEffectCategory.BENEFICIAL, 0xEDEDE8);
     }
 
     @Override

@@ -1,10 +1,10 @@
 {
 	"format_version": "1.9.0",
-	"credit": "Made with Blockbench",
+    "credit": "Made by JustMili",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "underthestars:item/3d/cooked_marshmallow_on_a_stick",
-		"particle": "underthestars:item/3d/cooked_marshmallow_on_a_stick"
+		"0": "underthestars:item/3d/marshmallow_on_a_stick",
+		"particle": "underthestars:item/3d/marshmallow_on_a_stick"
 	},
 	"elements": [
 		{

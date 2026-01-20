@@ -1,0 +1,10 @@
+{
+  "chocolate_unwrapping": {
+    "sounds": [
+      {
+        "name": "underthestars:chocolate_unwrapping",
+        "stream": false
+      }
+    ]
+  }
+}

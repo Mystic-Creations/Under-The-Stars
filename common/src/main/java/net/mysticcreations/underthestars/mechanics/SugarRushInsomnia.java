@@ -21,8 +21,7 @@ public class SugarRushInsomnia {
         }
 
         if (player.hasEffect(UtsEffects.SUGAR_RUSH.get())) {
-            //TODO: Make it appear
-            if (!level.isClientSide) player.displayClientMessage(Component.translatable("message.underthestars.sugar_rush_insomnia"), true);
+            if (level.isClientSide) player.displayClientMessage(Component.translatable("message.underthestars.sugar_rush_insomnia"), true);
             return EventResult.interruptFalse();
         }
 

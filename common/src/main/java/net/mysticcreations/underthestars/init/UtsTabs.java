@@ -17,21 +17,21 @@ public class UtsTabs {
             .icon(() -> new ItemStack(UtsItems.MARSHMALLOW.get()))
             .displayItems((parameters, tabData) -> {
                 tabData.accept(UtsBlocks.WHITE_SLEEPING_BAG.get().asItem());
+                tabData.accept(UtsBlocks.LIGHT_GRAY_SLEEPING_BAG.get().asItem());
+                tabData.accept(UtsBlocks.GRAY_SLEEPING_BAG.get().asItem());
+                tabData.accept(UtsBlocks.BLACK_SLEEPING_BAG.get().asItem());
+                tabData.accept(UtsBlocks.BROWN_SLEEPING_BAG.get().asItem());
+                tabData.accept(UtsBlocks.RED_SLEEPING_BAG.get().asItem());
                 tabData.accept(UtsBlocks.ORANGE_SLEEPING_BAG.get().asItem());
-                tabData.accept(UtsBlocks.MAGENTA_SLEEPING_BAG.get().asItem());
-                tabData.accept(UtsBlocks.LIGHT_BLUE_SLEEPING_BAG.get().asItem());
                 tabData.accept(UtsBlocks.YELLOW_SLEEPING_BAG.get().asItem());
                 tabData.accept(UtsBlocks.LIME_SLEEPING_BAG.get().asItem());
-                tabData.accept(UtsBlocks.PINK_SLEEPING_BAG.get().asItem());
-                tabData.accept(UtsBlocks.GRAY_SLEEPING_BAG.get().asItem());
-                tabData.accept(UtsBlocks.LIGHT_GRAY_SLEEPING_BAG.get().asItem());
-                tabData.accept(UtsBlocks.CYAN_SLEEPING_BAG.get().asItem());
-                tabData.accept(UtsBlocks.PURPLE_SLEEPING_BAG.get().asItem());
-                tabData.accept(UtsBlocks.BLUE_SLEEPING_BAG.get().asItem());
-                tabData.accept(UtsBlocks.BROWN_SLEEPING_BAG.get().asItem());
                 tabData.accept(UtsBlocks.GREEN_SLEEPING_BAG.get().asItem());
-                tabData.accept(UtsBlocks.RED_SLEEPING_BAG.get().asItem());
-                tabData.accept(UtsBlocks.BLACK_SLEEPING_BAG.get().asItem());
+                tabData.accept(UtsBlocks.CYAN_SLEEPING_BAG.get().asItem());
+                tabData.accept(UtsBlocks.LIGHT_BLUE_SLEEPING_BAG.get().asItem());
+                tabData.accept(UtsBlocks.BLUE_SLEEPING_BAG.get().asItem());
+                tabData.accept(UtsBlocks.PURPLE_SLEEPING_BAG.get().asItem());
+                tabData.accept(UtsBlocks.MAGENTA_SLEEPING_BAG.get().asItem());
+                tabData.accept(UtsBlocks.PINK_SLEEPING_BAG.get().asItem());
                 tabData.accept(UtsItems.KELP_GELATIN.get());
                 tabData.accept(UtsItems.MARSHMALLOW.get());
                 tabData.accept(UtsItems.COOKED_MARSHMALLOW.get());

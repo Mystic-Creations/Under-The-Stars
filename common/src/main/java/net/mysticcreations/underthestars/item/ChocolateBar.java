@@ -23,7 +23,7 @@ public class ChocolateBar extends Item {
 		super(new Properties()
             .stacksTo(16)
             .rarity(Rarity.COMMON)
-            .food((new FoodProperties.Builder()).nutrition(7).saturationMod(1.2f)
+            .food((new FoodProperties.Builder()).nutrition(6).saturationMod(1.2f)
                 .build()
             ));
 	}

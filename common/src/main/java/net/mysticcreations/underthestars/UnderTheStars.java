@@ -7,10 +7,7 @@ import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
-import net.mysticcreations.underthestars.init.UtsBlocks;
-import net.mysticcreations.underthestars.init.UtsEffects;
-import net.mysticcreations.underthestars.init.UtsItems;
-import net.mysticcreations.underthestars.init.UtsTabs;
+import net.mysticcreations.underthestars.init.*;
 import net.mysticcreations.underthestars.mechanics.HealingCampfire;
 import net.mysticcreations.underthestars.mechanics.SugarRushInsomnia;
 import net.mysticcreations.underthestars.mechanics.logic.StargazingAdvancement;
@@ -23,6 +20,7 @@ public final class UnderTheStars {
         UtsItems.register();
         UtsTabs.register();
         UtsEffects.register();
+        UtsSounds.register();
         registerEvents();
     }
     public static void registerEvents() {

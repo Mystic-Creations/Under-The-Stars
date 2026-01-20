@@ -1,0 +1,111 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made by JustMili",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "underthestars:block/smore",
+		"particle": "underthestars:block/smore"
+	},
+	"elements": [
+		{
+			"name": "top_biscuit",
+			"from": [5, 2.5, 4],
+			"to": [11, 3.5, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 2.5, 6]},
+			"faces": {
+				"north": {"uv": [0, 5.5, 3, 6], "texture": "#0"},
+				"east": {"uv": [0, 4, 4, 4.5], "texture": "#0"},
+				"south": {"uv": [0, 5, 3, 5.5], "texture": "#0"},
+				"west": {"uv": [0, 4.5, 4, 5], "texture": "#0"},
+				"up": {"uv": [3, 4, 0, 0], "texture": "#0"},
+				"down": {"uv": [6, 0, 3, 4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "chocolate",
+			"from": [5.5, 2, 4.5],
+			"to": [10.5, 3, 11.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 2, 6]},
+			"faces": {
+				"north": {"uv": [0, 11, 2.5, 11.5], "texture": "#0"},
+				"east": {"uv": [0, 9.5, 3.5, 10], "texture": "#0"},
+				"south": {"uv": [0, 10.5, 2.5, 11], "texture": "#0"},
+				"west": {"uv": [0, 10, 3.5, 10.5], "texture": "#0"},
+				"up": {"uv": [2.5, 9.5, 0, 6], "texture": "#0"},
+				"down": {"uv": [5, 6, 2.5, 9.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "marshmallow",
+			"from": [5.3, 0.5, 4.4],
+			"to": [10.7, 2, 7.8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 0.5, 4.8]},
+			"faces": {
+				"north": {"uv": [7.5, 11, 10, 12], "texture": "#0"},
+				"east": {"uv": [7.5, 9, 9, 10], "texture": "#0"},
+				"south": {"uv": [7.5, 10, 10, 11], "texture": "#0"},
+				"west": {"uv": [9, 9, 10.5, 10], "texture": "#0"},
+				"up": {"uv": [10, 7.5, 7.5, 6], "texture": "#0"},
+				"down": {"uv": [10, 7.5, 7.5, 9], "texture": "#0"}
+			}
+		},
+		{
+			"name": "marshmallow",
+			"from": [5.3, 0.5, 8.1],
+			"to": [10.7, 2, 11.6],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 0.5, 8.2]},
+			"faces": {
+				"north": {"uv": [5, 13, 7.5, 14], "texture": "#0"},
+				"east": {"uv": [5, 10, 7, 11], "texture": "#0"},
+				"south": {"uv": [5, 12, 7.5, 13], "texture": "#0"},
+				"west": {"uv": [5, 11, 7, 12], "texture": "#0"},
+				"up": {"uv": [7.5, 8, 5, 6], "texture": "#0"},
+				"down": {"uv": [7.5, 8, 5, 10], "texture": "#0"}
+			}
+		},
+		{
+			"name": "bottom_biscuit",
+			"from": [5, 0, 4],
+			"to": [11, 1, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 0, 6]},
+			"faces": {
+				"north": {"uv": [6, 5.5, 9, 6], "texture": "#0"},
+				"east": {"uv": [6, 4, 10, 4.5], "texture": "#0"},
+				"south": {"uv": [6, 5, 9, 5.5], "texture": "#0"},
+				"west": {"uv": [6, 4.5, 10, 5], "texture": "#0"},
+				"up": {"uv": [9, 4, 6, 0], "texture": "#0"},
+				"down": {"uv": [12, 0, 9, 4], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [-80, 0, -90],
+			"translation": [4, 0.25, 0],
+			"scale": [0.65, 0.65, 0.65]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [-80, 0, -90],
+			"translation": [4, 0.25, 0],
+			"scale": [0.65, 0.65, 0.65]
+		},
+		"firstperson_righthand": {
+			"rotation": [65, 0, -90],
+			"translation": [7, 3, -1.5],
+			"scale": [0.9, 0.8, 1]
+		},
+		"firstperson_lefthand": {
+			"rotation": [65, 0, -90],
+			"translation": [7, 3, -1.5],
+			"scale": [0.9, 0.8, 1]
+		}
+	},
+	"groups": [
+		{
+			"name": "smore_1",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1, 2, 3, 4]
+		}
+	]
+}

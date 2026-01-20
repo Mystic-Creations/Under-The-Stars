@@ -26,15 +26,15 @@ import net.mysticcreations.underthestars.init.UtsEffects;
 public class Smore extends Block {
     public static final IntegerProperty COUNT = IntegerProperty.create("count", 1, 3);
     public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.Plane.HORIZONTAL);
-    private static final VoxelShape SINGLE = Block.box(2, 0, 2, 14, 4, 14); //TODO: Adjust bound size
+    private static final VoxelShape SINGLE = Block.box(5, 0, 4, 11, 4, 12);
     private static final VoxelShape DOUBLE = Block.box(1, 0, 1, 15, 6, 15);
-    private static final VoxelShape TRIPLE = Block.box(0, 0, 0, 16, 8, 16); //TODO: Adjust bound size
+    private static final VoxelShape TRIPLE = Block.box(1, 0, 1, 15, 8, 15);
 
     public Smore() {
         super(Properties.of()
-            .mapColor(MapColor.WOOL) //TODO: Change
+            .mapColor(MapColor.TERRACOTTA_WHITE)
             .strength(0.4F)
-            .sound(SoundType.WOOL) //TODO: Change
+            .sound(SoundType.NETHER_WART)
             .noOcclusion()
             .lightLevel(state -> 0)
             .isSuffocating((bs, br, bp) -> false)
@@ -91,9 +91,9 @@ public class Smore extends Block {
         }
 
         if (!level.isClientSide) {
-            player.getFoodData().eat(2, 15.0F);
+            player.getFoodData().eat(12, 15.0f);
 
-            player.addEffect(new MobEffectInstance(UtsEffects.SUGAR_RUSH.get(), 6000, 0));
+            player.addEffect(new MobEffectInstance(UtsEffects.SUGAR_RUSH.get(), 6000, 0, false, false));
 
             int count = state.getValue(COUNT);
             if (count > 1) {
