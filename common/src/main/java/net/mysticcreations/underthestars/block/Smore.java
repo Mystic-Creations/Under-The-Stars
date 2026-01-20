@@ -24,7 +24,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.mysticcreations.underthestars.init.UtsEffects;
 
 public class Smore extends Block {
-    public static final IntegerProperty COUNT = IntegerProperty.create("count", 1, 3);
+    public static final IntegerProperty SMORES = IntegerProperty.create("smores", 1, 3);
     public static final DirectionProperty FACING = DirectionProperty.create("facing", Direction.Plane.HORIZONTAL);
     private static final VoxelShape SINGLE = Block.box(5, 0, 4, 11, 4, 12);
     private static final VoxelShape DOUBLE = Block.box(1, 0, 1, 15, 6, 15);
@@ -42,7 +42,7 @@ public class Smore extends Block {
         );
 
         this.registerDefaultState(this.stateDefinition.any()
-            .setValue(COUNT, 1)
+            .setValue(SMORES, 1)
             .setValue(FACING, Direction.NORTH)
         );
     }
@@ -54,9 +54,9 @@ public class Smore extends Block {
         BlockState state = level.getBlockState(pos);
 
         if (state.is(this)) {
-            int count = state.getValue(COUNT);
+            int count = state.getValue(SMORES);
             if (count < 3) {
-                return state.setValue(COUNT, count + 1);
+                return state.setValue(SMORES, count + 1);
             }
             return null;
         }
@@ -73,10 +73,10 @@ public class Smore extends Block {
             && stack.getItem() instanceof BlockItem blockItem
             && blockItem.getBlock() == this) {
 
-            int count = state.getValue(COUNT);
+            int count = state.getValue(SMORES);
             if (count < 3) {
                 if (!level.isClientSide) {
-                    level.setBlock(pos, state.setValue(COUNT, count + 1), 3);
+                    level.setBlock(pos, state.setValue(SMORES, count + 1), 3);
                     if (!player.getAbilities().instabuild) {
                         stack.shrink(1);
                     }
@@ -95,9 +95,9 @@ public class Smore extends Block {
 
             player.addEffect(new MobEffectInstance(UtsEffects.SUGAR_RUSH.get(), 6000, 0, false, false));
 
-            int count = state.getValue(COUNT);
+            int count = state.getValue(SMORES);
             if (count > 1) {
-                level.setBlock(pos, state.setValue(COUNT, count - 1), 3);
+                level.setBlock(pos, state.setValue(SMORES, count - 1), 3);
             } else {
                 level.removeBlock(pos, false);
             }
@@ -108,7 +108,7 @@ public class Smore extends Block {
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return switch (state.getValue(COUNT)) {
+        return switch (state.getValue(SMORES)) {
             case 2 -> DOUBLE;
             case 3 -> TRIPLE;
             default -> SINGLE;
@@ -122,6 +122,6 @@ public class Smore extends Block {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(COUNT, FACING);
+        builder.add(SMORES, FACING);
     }
 }

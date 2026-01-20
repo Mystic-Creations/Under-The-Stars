@@ -27,20 +27,19 @@ public class HealingCampfire {
             BlockState state = level.getBlockState(pos);
 
             if (state.getBlock() instanceof CampfireBlock &&
-                state.getValue(CampfireBlock.LIT)) {
+                state.getValue(CampfireBlock.LIT) &&
+                !level.getBlockState(pos.below()).isAir()
+            ) {
                 nearCampfire = true;
                 break;
             }
         }
-        if (nearCampfire) {
-            player.addEffect(new MobEffectInstance(
-                MobEffects.REGENERATION,
-                100,
-                0,
-                false,
-                false,
-                false
-            ));
+
+        if (nearCampfire &&
+            player.hurtTime == 0 &&
+            (player.getY() >= 63 || (player.getY() <= -16 && player.getY() >= -48))
+        ) {
+            player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 0, false, false, false));
         }
     }
 }
