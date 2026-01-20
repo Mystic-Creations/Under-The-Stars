@@ -3,10 +3,7 @@ package net.mysticcreations.underthestars.init;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.world.item.BedItem;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.DoubleHighBlockItem;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.BedBlock;
 import net.minecraft.world.level.block.Block;
 import net.mysticcreations.underthestars.UnderTheStars;
@@ -15,6 +12,7 @@ import net.mysticcreations.underthestars.item.*;
 public class UtsItems {
     public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(UnderTheStars.MODID, Registries.ITEM);
 
+    //Blocks
     public static final RegistrySupplier<Item> WHITE_SLEEPING_BAG = bedBlock(UtsBlocks.WHITE_SLEEPING_BAG);
     public static final RegistrySupplier<Item> LIGHT_GRAY_SLEEPING_BAG = bedBlock(UtsBlocks.LIGHT_GRAY_SLEEPING_BAG);
     public static final RegistrySupplier<Item> GRAY_SLEEPING_BAG = bedBlock(UtsBlocks.GRAY_SLEEPING_BAG);
@@ -31,8 +29,10 @@ public class UtsItems {
     public static final RegistrySupplier<Item> PURPLE_SLEEPING_BAG = bedBlock(UtsBlocks.PURPLE_SLEEPING_BAG);
     public static final RegistrySupplier<Item> MAGENTA_SLEEPING_BAG = bedBlock(UtsBlocks.MAGENTA_SLEEPING_BAG);
     public static final RegistrySupplier<Item> PINK_SLEEPING_BAG = bedBlock(UtsBlocks.PINK_SLEEPING_BAG);
+    //BlockItems
     public static final RegistrySupplier<Item> SMORE = REGISTRY.register("smore", () -> new SmoreBlockItem(UtsBlocks.SMORE.get()));
 
+    //Items
     public static final RegistrySupplier<Item> KELP_GELATIN = REGISTRY.register("kelp_gelatin", KelpGelatin::new);
     public static final RegistrySupplier<Item> MARSHMALLOW = REGISTRY.register("marshmallow", Marshmallow::new);
     public static final RegistrySupplier<Item> COOKED_MARSHMALLOW = REGISTRY.register("cooked_marshmallow", CookedMarshmallow::new);
@@ -43,6 +43,9 @@ public class UtsItems {
     public static final RegistrySupplier<Item> WRAPPED_CHOCOLATE_BAR = REGISTRY.register("wrapped_chocolate_bar", WrappedChocolateBar::new);
     public static final RegistrySupplier<Item> CHOCOLATE_PIECE = REGISTRY.register("chocolate_piece", ChocolatePiece::new);
     public static final RegistrySupplier<Item> BISCUIT = REGISTRY.register("biscuit", Biscuit::new);
+
+    //Other
+    public static final RegistrySupplier<Item> STARGAZING_ADV = REGISTRY.register("stargazing_icon", () -> new Item(new Item.Properties().stacksTo(1)));
 
     public static void register() {
         REGISTRY.register();

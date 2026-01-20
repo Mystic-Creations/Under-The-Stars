@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:nether_star"
+      "item": "underthestars:stargazing_icon"
     },
     "title": {
       "translate": "advancement.underthestars.stargazing.title"

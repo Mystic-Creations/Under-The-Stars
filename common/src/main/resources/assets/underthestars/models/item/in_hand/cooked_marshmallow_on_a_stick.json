@@ -1,9 +1,10 @@
 {
 	"format_version": "1.9.0",
-    "credit": "Made by JustMili",
+	"credit": "Made by JustMili",
 	"texture_size": [32, 32],
 	"textures": {
 		"0": "underthestars:item/3d/cooked_marshmallow_on_a_stick",
+		"1": "underthestars:item/3d/cooked_marshmallow_stick_drip",
 		"particle": "underthestars:item/3d/cooked_marshmallow_on_a_stick"
 	},
 	"elements": [
@@ -19,6 +20,34 @@
 				"west": {"uv": [2, 3, 4, 6], "texture": "#0"},
 				"up": {"uv": [2, 8, 0, 6], "texture": "#0"},
 				"down": {"uv": [8, 0, 6, 2], "texture": "#0"}
+			}
+		},
+		{
+			"name": "drip",
+			"from": [9, 14, 0.9],
+			"to": [9, 19, 6.9],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [7, 17, 4.9]},
+			"faces": {
+				"north": {"uv": [16, 13.5, 16, 16], "texture": "#1"},
+				"east": {"uv": [16, 0, 11, 4], "texture": "#1"},
+				"south": {"uv": [16, 13.5, 16, 16], "texture": "#1"},
+				"west": {"uv": [11, 0, 16, 4], "texture": "#1"},
+				"up": {"uv": [16, 13.5, 16, 16], "texture": "#1"},
+				"down": {"uv": [16, 13.5, 16, 16], "texture": "#1"}
+			}
+		},
+		{
+			"name": "drip_small",
+			"from": [7.5, 12.9, 1.9],
+			"to": [7.5, 16.9, 6.9],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [5.5, 15.9, 4.9]},
+			"faces": {
+				"north": {"uv": [16, 13.5, 16, 16], "texture": "#1"},
+				"east": {"uv": [16, 5, 12, 9], "texture": "#1"},
+				"south": {"uv": [16, 13.5, 16, 16], "texture": "#1"},
+				"west": {"uv": [12, 5, 16, 9], "texture": "#1"},
+				"up": {"uv": [16, 13.5, 16, 16], "texture": "#1"},
+				"down": {"uv": [16, 13.5, 16, 16], "texture": "#1"}
 			}
 		},
 		{
