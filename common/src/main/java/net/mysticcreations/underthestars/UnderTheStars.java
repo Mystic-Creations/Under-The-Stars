@@ -1,6 +1,7 @@
 package net.mysticcreations.underthestars;
 
 import dev.architectury.event.events.common.InteractionEvent;
+import dev.architectury.event.events.common.PlayerEvent;
 import dev.architectury.event.events.common.TickEvent;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementProgress;
@@ -10,9 +11,13 @@ import net.minecraft.server.level.ServerPlayer;
 import net.mysticcreations.underthestars.init.*;
 import net.mysticcreations.underthestars.mechanics.HealingCampfire;
 import net.mysticcreations.underthestars.mechanics.SugarRushInsomnia;
+import net.mysticcreations.underthestars.mechanics.logic.EasterEggAdvancements;
 import net.mysticcreations.underthestars.mechanics.logic.StargazingAdvancement;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public final class UnderTheStars {
+    public static final Logger LOGGER = LogManager.getLogger(UnderTheStars.class);
     public static final String MODID = "underthestars";
 
     public static void init() {
@@ -26,6 +31,7 @@ public final class UnderTheStars {
     public static void registerEvents() {
         TickEvent.PLAYER_POST.register(HealingCampfire::onPlayerTick);
         TickEvent.PLAYER_POST.register(StargazingAdvancement::onPlayerTick);
+        PlayerEvent.PLAYER_ADVANCEMENT.register(EasterEggAdvancements::onAdvancement);
         InteractionEvent.RIGHT_CLICK_BLOCK.register(SugarRushInsomnia::onSleepAttempt);
     }
 

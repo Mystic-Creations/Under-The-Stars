@@ -3,9 +3,9 @@
 	"credit": "Made by JustMili",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "underthestars:item/3d/cooked_marshmallow_on_a_stick",
-		"1": "underthestars:item/3d/cooked_marshmallow_stick_drip",
-		"particle": "underthestars:item/3d/cooked_marshmallow_on_a_stick"
+		"0": "underthestars:item/in_hand/cooked_marshmallow_on_a_stick",
+		"1": "underthestars:item/in_hand/cooked_marshmallow_stick_drip",
+		"particle": "underthestars:item/in_hand/cooked_marshmallow_on_a_stick"
 	},
 	"elements": [
 		{

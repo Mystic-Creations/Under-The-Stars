@@ -1,10 +1,10 @@
 {
 	"format_version": "1.9.0",
-    "credit": "Made by JustMili",
+	"credit": "Made by JustMili",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "underthestars:item/in_hand/marshmallow_on_a_stick",
-		"particle": "underthestars:item/in_hand/marshmallow_on_a_stick"
+		"0": "underthestars:item/in_hand/burned_marshmallow_on_a_stick",
+		"particle": "underthestars:item/in_hand/burned_marshmallow_on_a_stick"
 	},
 	"elements": [
 		{

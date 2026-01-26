@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:charcoal"
+    },
+    "title": "Did It Again",
+    "description": {
+      "text": "TheShadeVT burned her food to charcoal again",
+      "color": "#6A539B"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "underthestars:cooking/cooked_marshmallow",
+  "criteria": {
+    "inventory_changed": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "inventory_changed"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

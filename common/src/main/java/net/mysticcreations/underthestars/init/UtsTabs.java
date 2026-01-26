@@ -34,14 +34,16 @@ public class UtsTabs {
                 tabData.accept(UtsBlocks.PINK_SLEEPING_BAG.get().asItem());
                 tabData.accept(UtsItems.KELP_GELATIN.get());
                 tabData.accept(UtsItems.MARSHMALLOW.get());
-                tabData.accept(UtsItems.COOKED_MARSHMALLOW.get());
                 tabData.accept(UtsItems.MARSHMALLOW_ON_A_STICK.get());
+                tabData.accept(UtsItems.COOKED_MARSHMALLOW.get());
                 tabData.accept(UtsItems.COOKED_MARSHMALLOW_ON_A_STICK.get());
+                tabData.accept(UtsItems.BURNED_MARSHMALLOW.get());
+                tabData.accept(UtsItems.BURNED_MARSHMALLOW_ON_A_STICK.get());
+                tabData.accept(UtsItems.BISCUIT.get());
                 tabData.accept(UtsItems.CHOCOLATE_BAR.get());
                 tabData.accept(UtsItems.OPEN_CHOCOLATE_BAR.get());
                 tabData.accept(UtsItems.WRAPPED_CHOCOLATE_BAR.get());
                 tabData.accept(UtsItems.CHOCOLATE_PIECE.get());
-                tabData.accept(UtsItems.BISCUIT.get());
                 tabData.accept(UtsItems.SMORE.get().asItem());
             }).build());
 

@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "underthestars:burned_marshmallow"
+    },
+    "title": {
+      "translate": "advancements.underthestars.burned_marshmallow_or_on_stick.title"
+    },
+    "description": {
+      "translate": "advancements.underthestars.burned_marshmallow_or_on_stick.descr"
+    },
+    "hidden": true
+  },
+  "parent": "underthestars:cooking/cooked_marshmallow",
+  "criteria": {
+    "inventory_changed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {},
+        "items": [
+          {
+            "items": [
+              "underthestars:burned_marshmallow",
+              "underthestars:burned_marshmallow_on_a_stick"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "inventory_changed"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

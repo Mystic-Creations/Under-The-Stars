@@ -36,8 +36,10 @@ public class UtsItems {
     public static final RegistrySupplier<Item> KELP_GELATIN = REGISTRY.register("kelp_gelatin", KelpGelatin::new);
     public static final RegistrySupplier<Item> MARSHMALLOW = REGISTRY.register("marshmallow", Marshmallow::new);
     public static final RegistrySupplier<Item> COOKED_MARSHMALLOW = REGISTRY.register("cooked_marshmallow", CookedMarshmallow::new);
+    public static final RegistrySupplier<Item> BURNED_MARSHMALLOW = REGISTRY.register("burned_marshmallow", BurnedMarshmallow::new);
     public static final RegistrySupplier<Item> MARSHMALLOW_ON_A_STICK = REGISTRY.register("marshmallow_on_a_stick", MarshmallowOnAStick::new);
     public static final RegistrySupplier<Item> COOKED_MARSHMALLOW_ON_A_STICK = REGISTRY.register("cooked_marshmallow_on_a_stick", CookedMarshmallowOnAStick::new);
+    public static final RegistrySupplier<Item> BURNED_MARSHMALLOW_ON_A_STICK = REGISTRY.register("burned_marshmallow_on_a_stick", BurnedMarshmallowOnAStick::new);
     public static final RegistrySupplier<Item> CHOCOLATE_BAR = REGISTRY.register("chocolate_bar", ChocolateBar::new);
     public static final RegistrySupplier<Item> OPEN_CHOCOLATE_BAR = REGISTRY.register("open_chocolate_bar", OpenChocolateBar::new);
     public static final RegistrySupplier<Item> WRAPPED_CHOCOLATE_BAR = REGISTRY.register("wrapped_chocolate_bar", WrappedChocolateBar::new);

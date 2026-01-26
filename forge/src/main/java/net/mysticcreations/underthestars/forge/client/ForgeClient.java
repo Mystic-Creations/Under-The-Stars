@@ -10,8 +10,12 @@ import net.mysticcreations.underthestars.UnderTheStars;
 public class ForgeClient {
     @SubscribeEvent
     public static void registerAdditionalModels(ModelEvent.RegisterAdditional context) {
+        context.register(UnderTheStars.asModelResource("in_hand/marshmallow", "inventory"));
         context.register(UnderTheStars.asModelResource("in_hand/marshmallow_on_a_stick", "inventory"));
+        context.register(UnderTheStars.asModelResource("in_hand/cooked_marshmallow", "inventory"));
         context.register(UnderTheStars.asModelResource("in_hand/cooked_marshmallow_on_a_stick", "inventory"));
+        context.register(UnderTheStars.asModelResource("in_hand/burned_marshmallow", "inventory"));
+        context.register(UnderTheStars.asModelResource("in_hand/burned_marshmallow_on_a_stick", "inventory"));
         context.register(UnderTheStars.asModelResource("in_hand/smore", "inventory"));
     }
 }
