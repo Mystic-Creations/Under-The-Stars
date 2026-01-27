@@ -32,6 +32,7 @@ dependencies {
     forge "net.minecraftforge:forge:$rootProject.forge_version"
 
     modImplementation "dev.architectury:architectury-forge:$rootProject.architectury_api_version"
+    modImplementation "com.github.glitchfiend:TerraBlender-forge:${rootProject.minecraft_version}-${rootProject.terrablender_version}"
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive = false }
     shadowBundle project(path: ':common', configuration: 'transformProductionForge')
@@ -42,12 +43,14 @@ processResources {
     inputs.property 'minecraft_version', project.minecraft_version
     inputs.property 'forge_version_range', project.forge_version_range
     inputs.property 'architectury_api_version', project.architectury_api_version
+    inputs.property 'terrablender_version', project.terrablender_version
 
     filesMatching('META-INF/mods.toml') {
         expand mod_version: inputs.properties.mod_version,
                 forge_version_range: inputs.properties.forge_version_range,
                 minecraft_version: inputs.properties.minecraft_version,
-                architectury_api_version: inputs.properties.architectury_api_version
+                architectury_api_version: inputs.properties.architectury_api_version,
+                terrablender_version: inputs.properties.terrablender_version
     }
 }
 

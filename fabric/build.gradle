@@ -27,6 +27,7 @@ dependencies {
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:$rootProject.fabric_api_version"
     modImplementation "dev.architectury:architectury-fabric:$rootProject.architectury_api_version"
+    modImplementation "com.github.glitchfiend:TerraBlender-fabric:${rootProject.minecraft_version}-${rootProject.terrablender_version}"
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive = false }
     shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
@@ -37,12 +38,14 @@ processResources {
     inputs.property 'minecraft_version', project.minecraft_version
     inputs.property 'fabric_loader_version', project.fabric_loader_version
     inputs.property 'architectury_api_version', project.architectury_api_version
+    inputs.property 'terrablender_version', project.terrablender_version
 
     filesMatching('fabric.mod.json') {
         expand mod_version: inputs.properties.mod_version,
                 minecraft_version: inputs.properties.minecraft_version,
                 architectury_api_version: inputs.properties.architectury_api_version,
-                fabric_loader_version: inputs.properties.fabric_loader_version
+                fabric_loader_version: inputs.properties.fabric_loader_version,
+                terrablender_version: inputs.properties.terrablender_version
     }
 }
 

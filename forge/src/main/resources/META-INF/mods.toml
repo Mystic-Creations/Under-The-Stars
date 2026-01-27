@@ -31,3 +31,10 @@ mandatory = true
 versionRange = "[${architectury_api_version},)"
 ordering = "AFTER"
 side = "BOTH"
+
+[[dependencies.underthestars]]
+modId = "terrablender"
+mandatory = true
+versionRange = "[${terrablender_version},)"
+ordering = "NONE"
+side = "BOTH"

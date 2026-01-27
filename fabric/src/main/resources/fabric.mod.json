@@ -34,6 +34,7 @@
     "minecraft": "${minecraft_version}",
     "java": ">=17",
     "architectury": ">=${architectury_api_version}",
+    "terrablender": ">=${terrablender_version}",
     "fabric-api": "*"
   }
 }
