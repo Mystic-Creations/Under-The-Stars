@@ -47,21 +47,16 @@ public abstract class ItemRendererMixin {
         }
 
         // Smore
-        if (heldItem instanceof BlockItem blockItem && blockItem.getBlock() == UtsBlocks.SMORE.get()) {
+        if (heldItem instanceof BlockItem blockItem && blockItem.getBlock() == UtsBlocks.SMORE.get())
             return getModel(renderer, isGuiContext(context) ? "smore" : "in_hand/smore");
-        }
 
         return original;
     }
 
     private static boolean isGuiContext(ItemDisplayContext context) {
-        return context == ItemDisplayContext.GUI
-            || context == ItemDisplayContext.GROUND
-            || context == ItemDisplayContext.FIXED;
+        return context == ItemDisplayContext.GUI || context == ItemDisplayContext.GROUND || context == ItemDisplayContext.FIXED;
     }
     private static BakedModel getModel(ItemRenderer renderer, String path) {
-        return renderer.getItemModelShaper()
-            .getModelManager()
-            .getModel(UnderTheStars.asModelResource(path, "inventory"));
+        return renderer.getItemModelShaper().getModelManager().getModel(UnderTheStars.asModelResource(path, "inventory"));
     }
 }
