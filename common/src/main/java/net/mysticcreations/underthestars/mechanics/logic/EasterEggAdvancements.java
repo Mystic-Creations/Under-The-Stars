@@ -13,6 +13,6 @@ public class EasterEggAdvancements {
 
         if (UnderTheStars.hasAdvancement(player, "cooking/burned_marshmallow_or_on_stick")
             && !UnderTheStars.hasAdvancement(player, "easter_egg/theshadevt")) //If she burned but doesn't have the Easter Egg adv yet
-            UnderTheStars.grantAdvancement(player, "easter_egg/theshadevt");
+            UnderTheStars.wait(2, () -> UnderTheStars.grantAdvancement(player, "easter_egg/theshadevt"));
     }
 }

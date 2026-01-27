@@ -9,15 +9,16 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.mysticcreations.underthestars.init.*;
-import net.mysticcreations.underthestars.mechanics.HealingCampfire;
-import net.mysticcreations.underthestars.mechanics.SugarRushInsomnia;
-import net.mysticcreations.underthestars.mechanics.logic.EasterEggAdvancements;
-import net.mysticcreations.underthestars.mechanics.logic.StargazingAdvancement;
+import net.mysticcreations.underthestars.mechanics.*;
+import net.mysticcreations.underthestars.mechanics.logic.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.concurrent.ConcurrentLinkedQueue;
+
 public final class UnderTheStars {
     public static final Logger LOGGER = LogManager.getLogger(UnderTheStars.class);
+    private static final ConcurrentLinkedQueue<WorkItem> workQueue = new ConcurrentLinkedQueue<>();
     public static final String MODID = "underthestars";
 
     public static void init() {
@@ -53,5 +54,18 @@ public final class UnderTheStars {
             for (String criteria : progress.getRemainingCriteria())
                 player.getAdvancements().award(advancement, criteria);
         }
+    }
+
+    private static class WorkItem {
+        final Runnable task;
+        int ticksRemaining;
+
+        WorkItem(Runnable task, int delay) {
+            this.task = task;
+            this.ticksRemaining = delay;
+        }
+    }
+    public static void wait(int tickDelay, Runnable action) {
+        workQueue.add(new WorkItem(action, tickDelay));
     }
 }
