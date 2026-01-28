@@ -1,19 +1,17 @@
 package net.mysticcreations.underthestars.forge;
 
 import dev.architectury.platform.forge.EventBuses;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import net.mysticcreations.underthestars.UnderTheStars;
-import net.mysticcreations.underthestars.worldgen.UTSRegion;
+import net.mysticcreations.underthestars.worldgen.regions.OldGrowthOakForest;
 import terrablender.api.Regions;
 
 @Mod(UnderTheStars.MODID)
 public final class UnderTheStarsForge {
-
     public static IEventBus EVENT_BUS;
 
     public UnderTheStarsForge() {
@@ -26,8 +24,6 @@ public final class UnderTheStarsForge {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            Regions.register(new UTSRegion(new ResourceLocation("under_the_stars:overworld_region"), 1));
-        });
+        event.enqueueWork(() -> Regions.register(new OldGrowthOakForest(UnderTheStars.asResource("overworld_region"), 1)));
     }
 }

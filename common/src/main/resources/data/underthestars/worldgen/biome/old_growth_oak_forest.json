@@ -77,7 +77,9 @@
       "minecraft:spring_lava"
     ],
     [
-      "underthestars:old_growth_oak_tree",
+      "underthestars:old_growth_oak",
+      "minecraft:patch_grass_plain",
+      "minecraft:patch_large_fern",
       "minecraft:flower_default",
       "minecraft:patch_grass_forest",
       "minecraft:brown_mushroom_normal",

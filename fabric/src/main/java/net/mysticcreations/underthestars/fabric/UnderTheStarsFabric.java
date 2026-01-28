@@ -2,9 +2,8 @@ package net.mysticcreations.underthestars.fabric;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.minecraft.resources.ResourceLocation;
 import net.mysticcreations.underthestars.UnderTheStars;
-import net.mysticcreations.underthestars.worldgen.UTSRegion;
+import net.mysticcreations.underthestars.worldgen.regions.OldGrowthOakForest;
 import terrablender.api.Regions;
 import terrablender.api.TerraBlenderApi;
 
@@ -16,6 +15,6 @@ public final class UnderTheStarsFabric implements ModInitializer, TerraBlenderAp
 
     @Override
     public void onTerraBlenderInitialized() {
-        Regions.register(new UTSRegion(new ResourceLocation("under_the_stars:overworld_region"), 1));
+        Regions.register(new OldGrowthOakForest(UnderTheStars.asResource("overworld_region"), 1));
     }
 }
