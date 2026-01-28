@@ -1,18 +1,48 @@
 {
-  "feature": {
-    "config": {
-      "to_place": {
-        "type": "minecraft:simple_state_provider",
-        "state": {
-          "Name": "minecraft:acacia_planks"
+  "feature": "underthestars:old_growth_oak_tree",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "uniform",
+        "value": {
+          "min_inclusive": 1,
+          "max_inclusive": 12
         }
       }
     },
-    "type": "minecraft:simple_block"
-  },
-  "placement": [
     {
       "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:solid",
+        "offset": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:grass_block",
+        "offset": [
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "type": "minecraft:biome"
     }
   ]
 }
