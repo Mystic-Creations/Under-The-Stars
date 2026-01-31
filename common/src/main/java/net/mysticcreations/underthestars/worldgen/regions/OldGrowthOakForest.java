@@ -21,12 +21,10 @@ public class OldGrowthOakForest extends Region {
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
         //Good biome spawning but makes giant oceans labeled as this biome generating next to land with the biome
-        //Needs to be fixed
+        //Needs to be fixed to not make the oceans
+        //Also the biome often spans on land thousands of blocks
         new ParameterPointListBuilder()
-            .temperature(Temperature.span(
-                Temperature.NEUTRAL,
-                Temperature.WARM
-            ))
+            .temperature(Temperature.WARM)
             .humidity(Humidity.span(
                 Humidity.DRY,
                 Humidity.NEUTRAL
