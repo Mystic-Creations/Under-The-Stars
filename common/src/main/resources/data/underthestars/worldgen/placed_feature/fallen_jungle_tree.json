@@ -1,5 +1,5 @@
 {
-  "feature": "minecraft:fallen_jungle_tree",
+  "feature": "underthestars:fallen_jungle_tree",
   "placement": [
     {
       "type": "minecraft:block_predicate_filter",

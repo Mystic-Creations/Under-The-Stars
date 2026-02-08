@@ -1,5 +1,5 @@
 {
-  "feature": "minecraft:fallen_oak_tree",
+  "feature": "underthestars:fallen_oak_tree",
   "placement": [
     {
       "type": "minecraft:block_predicate_filter",

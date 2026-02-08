@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:fallen_tree",
+  "type": "underthestars:fallen_tree",
   "config": {
     "log_decorators": [
       {
