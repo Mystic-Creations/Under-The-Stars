@@ -1,10 +1,28 @@
 plugins {
-    id 'com.gradleup.shadow'
+    id("com.gradleup.shadow")
+}
+
+def generatedResources = file("src/generated")
+
+sourceSets {
+    main {
+        resources.srcDir generatedResources
+    }
 }
 
 loom {
     forge {
-        mixinConfig "underthestars.mixins.json"
+        mixinConfig "${rootProject.property("mod_id")}.mixins.json",
+                "${rootProject.property("mod_id")}-forge.mixins.json"
+    }
+
+
+    runs {
+        data {
+            data()
+            programArgs "--all", "--mod", "${rootProject.property("mod_id")}"
+            programArgs "--output", generatedResources.absolutePath
+        }
     }
 }
 
@@ -29,28 +47,35 @@ configurations {
 }
 
 dependencies {
-    forge "net.minecraftforge:forge:$rootProject.forge_version"
+    forge("${libs.forge.get()}")
+    modImplementation("${libs.forge.get()}")
 
-    modImplementation "dev.architectury:architectury-forge:$rootProject.architectury_api_version"
-    modImplementation "com.github.glitchfiend:TerraBlender-forge:${rootProject.minecraft_version}-${rootProject.terrablender_version}"
+    // Forge dependencies go here
+    //modImplementation("maven.modrinth:lumynlib:${rootProject.property("lumynlib")}-Forge")
+    modImplementation("dev.architectury:architectury:${libs.versions.arch.api.get()}")
+    modImplementation("com.github.glitchfiend:TerraBlender-forge:${libs.versions.minecraft.get()}-${rootProject.property("terrablender")}")
+
+    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${libs.versions.mixinextras.get()}"))
+    implementation(include("io.github.llamalad7:mixinextras-forge:${libs.versions.mixinextras.get()}"))
+    compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:${libs.versions.mixinsquared.get()}"))
+    implementation(include("com.github.bawnorton.mixinsquared:mixinsquared-forge:${libs.versions.mixinsquared.get()}"))
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive = false }
     shadowBundle project(path: ':common', configuration: 'transformProductionForge')
 }
 
 processResources {
-    inputs.property 'mod_version', project.mod_version
-    inputs.property 'minecraft_version', project.minecraft_version
-    inputs.property 'forge_version_range', project.forge_version_range
-    inputs.property 'architectury_api_version', project.architectury_api_version
-    inputs.property 'terrablender_version', project.terrablender_version
-
     filesMatching('META-INF/mods.toml') {
-        expand mod_version: inputs.properties.mod_version,
-                forge_version_range: inputs.properties.forge_version_range,
-                minecraft_version: inputs.properties.minecraft_version,
-                architectury_api_version: inputs.properties.architectury_api_version,
-                terrablender_version: inputs.properties.terrablender_version
+        expand "mod_id": rootProject.property("mod_id"),
+                "mod_name": rootProject.property("mod_name"),
+                "mod_version": rootProject.property("mod_version"),
+                "mod_description": rootProject.property("mod_description"),
+                "mod_authors": rootProject.property("mod_authors"),
+                "mod_license": rootProject.property("mod_license"),
+                "forge_version": libs.versions.forge.asProvider().get(),
+                "minecraft_version_constraint": rootProject.property("minecraft_version_constraint_forge"),
+                "architectury_api": libs.versions.arch.api.get(),
+                "terrablender": rootProject.property("terrablender")
     }
 }
 

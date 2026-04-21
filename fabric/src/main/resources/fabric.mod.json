@@ -1,44 +1,39 @@
 {
   "schemaVersion": 1,
-  "id": "underthestars",
+  "id": "${mod_id}",
   "version": "${mod_version}",
-  "name": "Under The Stars",
-  "description": "A small and simple mod about camping",
-  "authors": [
-    "Mystic Creations Team"
-  ],
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": ["${mod_authors}"],
   "contributors": [
     "JustDacia",
     "BluSpring"
   ],
   "contact": {
     "homepage": "https://modrinth.com/mod/under-the-stars",
-    "sources": "https://github.com/Mystic-Creations/Under-The-Stars/",
-    "issues": "https://github.com/Mystic-Creations/Under-The-Stars/issues"
+    "sources": "https://github.com/Lumynity-Studios/Under-The-Stars/",
+    "issues": "https://github.com/Lumynity-Studios/Under-The-Stars/issues"
   },
-  "license": "MIT",
+  "license": "${mod_license}",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "net.mysticcreations.underthestars.fabric.UnderTheStarsFabric"
-    ],
     "client": [
-      "net.mysticcreations.underthestars.fabric.client.FabricClient"
+      "net.lumynity.underthestars.fabric.client.FabricClient"
     ],
-    "terrablender": [
-      "net.mysticcreations.underthestars.fabric.UnderTheStarsFabric"
+    "main": [
+      "net.lumynity.underthestars.fabric.UnderTheStarsFabric"
     ]
   },
   "mixins": [
-    "underthestars.mixins.json"
+    "${mod_id}.mixins.json",
+    "${mod_id}-fabric.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${fabric_loader_version}",
-    "minecraft": "${minecraft_version}",
-    "java": ">=17",
-    "architectury": ">=${architectury_api_version}",
-    "terrablender": ">=${terrablender_version}",
-    "fabric-api": "*"
+    "fabric-api": ">=${fabric_api_version}",
+    "minecraft": "${minecraft_version_constraint}",
+    "architectury": ">=${architectury_api}",
+    "terrablender": ">=${terrablender}"
   }
 }

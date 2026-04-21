@@ -1,0 +1,47 @@
+package net.lumynity.underthestars.content.item;
+
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.level.Level;
+import net.lumynity.underthestars.registries.UtsItems;
+import net.lumynity.underthestars.registries.UtsSounds;
+
+public class WrappedChocolateBar extends Item {
+    public WrappedChocolateBar() {
+        super(new Properties()
+            .stacksTo(64)
+            .rarity(Rarity.COMMON)
+        );
+    }
+
+    @Override
+    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+        ItemStack stack = player.getItemInHand(hand);
+
+        if (!player.isShiftKeyDown()) {
+            return InteractionResultHolder.pass(stack);
+        }
+        if (!level.isClientSide) {
+            ItemStack openBar = new ItemStack(UtsItems.OPEN_CHOCOLATE_BAR.get());
+
+            if (stack.getCount() == 1) {
+                player.setItemInHand(hand, openBar);
+            } else {
+                stack.shrink(1);
+                if (!player.getInventory().add(openBar)) {
+                    player.drop(openBar, false);
+                }
+            }
+
+            level.playSound(null, player.blockPosition(), UtsSounds.CHOCOLATE_UNWRAPPING.get(), SoundSource.PLAYERS, 1.0F, 1.0F);
+        }
+
+        return InteractionResultHolder.sidedSuccess(player.getItemInHand(hand), level.isClientSide);
+    }
+
+}
